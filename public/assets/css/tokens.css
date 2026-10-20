@@ -1,4 +1,17 @@
 /* Design tokens. Every colour, size and timing used on the site is defined here. */
+
+/* Stand-in shown until Outfit arrives from Google Fonts: Arial resized to
+   Outfit's measured width and height, so text does not re-wrap or jump when
+   the real font swaps in. */
+@font-face {
+  font-family: "Outfit Fallback";
+  src: local("Arial"), local("ArialMT"), local("Arimo"), local("Roboto");
+  size-adjust: 99%;
+  ascent-override: 101%;
+  descent-override: 26.3%;
+  line-gap-override: 0%;
+}
+
 :root {
   /* Colour */
   --c-ink: #1c1715;
@@ -31,7 +44,7 @@
   );
 
   /* Type */
-  --font-sans: "Outfit", "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Outfit", "Outfit Fallback", "Helvetica Neue", Arial, sans-serif;
   --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
   --fs-h1: clamp(2.25rem, 1.4rem + 3.4vw, 4.5rem);
   --fs-h2: clamp(1.875rem, 1.35rem + 2.1vw, 3rem);
