@@ -1,0 +1,89 @@
+/* Design tokens. Every colour, size and timing used on the site is defined here. */
+:root {
+  /* Colour */
+  --c-ink: #1c1715;
+  --c-ink-2: #433c38;
+  --c-muted: #6f6661;
+  --c-paper: #ffffff;
+  --c-panel: #f6f4f1;
+  --c-line: #e5e0da;
+  --c-accent: #c5322d;
+  --c-accent-dark: #9e2521;
+  --c-accent-soft: #f7e9e7;
+  --c-accent-tint: rgba(197, 50, 45, 0.14);
+  --c-gold-light: #efc46c;
+  --c-deep: #1c1715;
+  --c-on-deep: #ffffff;
+  --c-on-deep-muted: #cfc7c1;
+  --c-error: #b3261e;
+  --c-success: #2f7d4f;
+
+  --grad-soft: linear-gradient(68deg, #f4e6d6 6%, #f3e1dd 50%, #fbf1df 94%);
+  --spectrum: linear-gradient(
+    90deg,
+    #c5322d 0 14.285%,
+    #d9722a 0 28.571%,
+    #d9a21b 0 42.857%,
+    #5f9e59 0 57.142%,
+    #2f8f96 0 71.428%,
+    #2f62a8 0 85.714%,
+    #6a4a9c 0
+  );
+
+  /* Type */
+  --font-sans: "Outfit", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --fs-h1: clamp(2.25rem, 1.4rem + 3.4vw, 4.5rem);
+  --fs-h2: clamp(1.875rem, 1.35rem + 2.1vw, 3rem);
+  --fs-h2-sm: clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem);
+  --fs-quote: clamp(1.5rem, 0.95rem + 2.1vw, 2.5rem);
+  --fs-card: clamp(1.375rem, 1rem + 1.4vw, 2.25rem);
+  --fs-lead: clamp(1.0625rem, 0.95rem + 0.5vw, 1.5rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-tiny: 0.75rem;
+
+  /* Layout */
+  --container: 1280px;
+  --gutter: 80px;
+  --edge: max(var(--gutter), calc((100vw - var(--container)) / 2));
+  --topbar-h: 47px;
+  --header-h: 82px;
+  --section-y: clamp(3.5rem, 2rem + 6vw, 7rem);
+
+  /* Shape */
+  --radius-sm: 8px;
+  --radius: 16px;
+  --radius-pill: 999px;
+  --shadow-card: 0 18px 40px -22px rgba(60, 30, 20, 0.28);
+  --shadow-header: 0 1px 0 var(--c-line);
+
+  /* Motion */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur: 0.35s;
+  --dur-slow: 0.8s;
+
+  /* Layers */
+  --z-header: 100;
+  --z-drawer: 200;
+  --z-fab: 90;
+}
+
+@media (max-width: 1279px) {
+  :root {
+    --gutter: 40px;
+  }
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --header-h: 64px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --gutter: 20px;
+    --header-h: 56px;
+  }
+}

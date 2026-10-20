@@ -1,0 +1,252 @@
+---
+/**
+ * Every page's frame: head, top strip, header, mobile menu, footer and the
+ * WhatsApp button. All contact details come from Site settings.
+ */
+import Icon from '../components/Icon.astro';
+import Media from '../components/Media.astro';
+import { getDoc, localDimensions } from '../lib/content.js';
+import { shareImage } from '../lib/image.js';
+import { nbsp, jsonForScript } from '../lib/text.js';
+
+interface Props {
+  seo?: { title?: string; description?: string; ogImage?: any };
+  /** Fallback title when the page has no SEO title. */
+  title?: string;
+  /** Key of the main menu item to mark as current. */
+  nav?: 'products' | 'industries' | 'infrastructure' | 'about' | 'blog' | 'contact' | 'home';
+  /** Page stylesheet in /assets/css/pages/, e.g. "home". */
+  css?: string;
+  /** Scripts in /assets/js/ beyond the shared media and nav scripts. */
+  scripts?: string[];
+  /** The organisation block Google reads; home and contact pages. */
+  orgData?: boolean;
+  noindex?: boolean;
+  /** Current item in the footer's legal links. */
+  legal?: 'privacy' | 'terms';
+  /** Hero image to fetch before anything else. */
+  preload?: { href: string; srcset?: string; sizes?: string };
+}
+
+const { seo = {}, title: fallbackTitle, nav, css, scripts = [], orgData = false, noindex = false, legal, preload } = Astro.props;
+const site = await getDoc('siteSettings');
+
+const siteUrl = Astro.site ?? new URL('https://www.spectrapack.co.in');
+const title = seo.title || fallbackTitle || site.companyName;
+const description = seo.description || site.orgDescription;
+const canonical = new URL(Astro.url.pathname, siteUrl).href;
+const ogSource = seo.ogImage?.asset || seo.ogImage?._local ? seo.ogImage : site.defaultOgImage;
+const dims = await localDimensions();
+const ogImage = shareImage(ogSource, siteUrl, dims);
+
+const phone = site.phones?.[0];
+const whatsapp = site.whatsappNumber ? `https://wa.me/${site.whatsappNumber}` : `mailto:${site.email}`;
+const quoteHref = '/contact/#enquiry';
+
+const MENU = [
+  { key: 'products', label: 'Products', href: '/products/' },
+  { key: 'industries', label: 'Industries', href: '/industries/' },
+  { key: 'infrastructure', label: 'Infrastructure', href: '/infrastructure/' },
+  { key: 'about', label: 'About us', href: '/about/' },
+  { key: 'blog', label: 'Blog', href: '/blog/' },
+  { key: 'contact', label: 'Contact us', href: '/contact/' },
+];
+const current = (key) => (nav === key ? 'page' : undefined);
+
+const org = orgData && {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${siteUrl.origin}/#organization`,
+  name: site.companyName,
+  url: `${siteUrl.origin}/`,
+  logo: `${siteUrl.origin}/assets/images/brand/logo.svg`,
+  image: shareImage(site.defaultOgImage, siteUrl, dims)?.url,
+  description: site.orgDescription,
+  foundingDate: site.foundingYear,
+  email: site.email,
+  telephone: phone?.link?.replace(/^\+91/, '+91-'),
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: site.streetAddress,
+    addressLocality: site.addressLocality,
+    addressRegion: site.addressRegion,
+    postalCode: site.postalCode,
+    addressCountry: 'IN',
+  },
+  contactPoint: [{
+    '@type': 'ContactPoint',
+    contactType: 'sales',
+    telephone: phone?.link?.replace(/^\+91/, '+91-'),
+    email: site.email,
+    areaServed: ((await getDoc('homePage')).exportMarkets || []).map((m) => m.code),
+    availableLanguage: site.languages,
+  }],
+  sameAs: [site.instagramUrl].filter(Boolean),
+};
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{title}</title>
+  {description && <meta name="description" content={description}>}
+  {noindex && <meta name="robots" content="noindex">}
+  <meta name="theme-color" content="#c5322d">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content={site.companyName}>
+  <meta property="og:title" content={title}>
+  {description && <meta property="og:description" content={description}>}
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  {!noindex && <link rel="canonical" href={canonical}>}
+  {!noindex && <meta property="og:url" content={canonical}>}
+  {ogImage && <meta property="og:image" content={ogImage.url}>}
+  {ogImage?.width && <meta property="og:image:width" content={String(ogImage.width)}>}
+  {ogImage?.height && <meta property="og:image:height" content={String(ogImage.height)}>}
+  {ogSource?.alt && <meta property="og:image:alt" content={ogSource.alt}>}
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  {preload && <link rel="preload" as="image" href={preload.href} imagesrcset={preload.srcset} imagesizes={preload.sizes} fetchpriority="high">}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  {css && <link rel="stylesheet" href={`/assets/css/pages/${css}.css`}>}
+  <script is:inline>document.documentElement.classList.add('js');</script>
+  {org && <script type="application/ld+json" set:html={jsonForScript(org)} />}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <p class="topbar__loc"><Icon name="pin" /> {site.locationLabel}</p>
+      <p class="topbar__note"><Icon name="megaphone" /> <strong>{site.topbarBold}</strong> <span>{site.topbarText}</span> <a href={quoteHref}>{site.topbarLinkLabel}</a></p>
+      <ul class="topbar__links">
+        {phone && <li><a href={`tel:${phone.link}`} aria-label={`Call ${phone.label}`}><Icon name="phone" /></a></li>}
+        <li><a href={`mailto:${site.email}`} aria-label={`Email ${site.email}`}><Icon name="mail" /></a></li>
+        <li><a href={whatsapp} target="_blank" rel="noopener" aria-label="WhatsApp"><Icon name="whatsapp" /></a></li>
+        {site.instagramUrl && <li><a href={site.instagramUrl} target="_blank" rel="noopener" aria-label="Instagram"><Icon name="instagram" /></a></li>}
+      </ul>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="/" aria-label={`${site.companyName}, home`}><img class="brand__logo" src="/assets/images/brand/logo.svg" alt="" width="8575" height="2688"></a>
+      <nav class="nav" aria-label="Primary">
+        <ul>
+          {MENU.map((m) => <li><a href={m.href} aria-current={current(m.key)}>{m.label}</a></li>)}
+        </ul>
+      </nav>
+      <a class="btn btn--solid btn--sm header__cta" href={quoteHref}>Get a quote <Icon name="arrow" /></a>
+      <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="drawer" data-menu-toggle>
+        <Icon name="menu" class="icon--menu" /><Icon name="close" class="icon--close" />
+      </button>
+    </div>
+  </header>
+
+  <div class="drawer" id="drawer" data-drawer>
+    <nav class="drawer__nav" aria-label="Mobile">
+      <a href="/" aria-current={current('home')}>Home <Icon name="chevron" /></a>
+      {MENU.map((m) => <a href={m.href} aria-current={current(m.key)}>{m.label} <Icon name="chevron" /></a>)}
+    </nav>
+    <div class="drawer__contact">
+      {phone && <a href={`tel:${phone.link}`}><Icon name="phone" /> <Fragment set:html={nbsp(phone.label)} /></a>}
+      <a href={`mailto:${site.email}`}><Icon name="mail" /> {site.email}</a>
+      <a class="btn btn--solid" href={quoteHref}><span class="btn__dot"><Icon name="chevron" /></span>Get a quote</a>
+    </div>
+  </div>
+
+  <main id="main">
+    <slot />
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="/" aria-label={`${site.companyName}, home`}><img class="brand__logo" src="/assets/images/brand/logo.svg" alt="" width="8575" height="2688"></a>
+        <p class="footer__company">{site.companyName}</p>
+        <p class="footer__address">{(site.addressLines || []).map((line, i) => <>{i > 0 && <br />}{line}</>)}</p>
+        <p class="footer__phone"><Icon name="phone" /><span>{(site.phones || []).map((p, i) => <>{i > 0 && <br />}<a href={`tel:${p.link}`} set:html={nbsp(p.label)} /></>)}</span></p>
+        <p class="footer__follow">Follow us</p>
+        <ul class="footer__social">
+          {site.instagramUrl && <li><a href={site.instagramUrl} target="_blank" rel="noopener" aria-label="Instagram"><Icon name="instagram" /></a></li>}
+          <li><a href={whatsapp} target="_blank" rel="noopener" aria-label="WhatsApp"><Icon name="whatsapp" /></a></li>
+          <li><a href={`mailto:${site.email}`} aria-label="Email"><Icon name="mail" /></a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h2 class="footer__title"><button type="button" aria-expanded="false" aria-controls="footer-about" data-toggle data-toggle-media="(max-width: 767px)">About us <Icon name="chevron-down" /></button></h2>
+        <div class="footer__panel" id="footer-about">
+          <ul class="footer__list">
+            <li><a href="/about/">Our story</a></li>
+            <li><a href="/about/#business">What we run</a></li>
+            <li><a href="/about/#milestones">Milestones</a></li>
+            <li><a href="/about/#team">Leadership</a></li>
+            <li><a href="/infrastructure/#process">Process &amp; machinery</a></li>
+            <li><a href="/infrastructure/#quality">Quality</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h2 class="footer__title"><button type="button" aria-expanded="false" aria-controls="footer-discover" data-toggle data-toggle-media="(max-width: 767px)">Discover more <Icon name="chevron-down" /></button></h2>
+        <div class="footer__panel" id="footer-discover">
+          <ul class="footer__list">
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/industries/">Industries</a></li>
+            <li><a href="/infrastructure/">Infrastructure</a></li>
+            <li><a href="/blog/">Blog</a></li>
+          </ul>
+          <a class="footer__highlight" href="/contact/">Contact us</a>
+        </div>
+      </div>
+
+      <div class="footer__card">
+        <h2 class="footer__title">{site.footerCardTitle}</h2>
+        <Media image={site.footerCardImage} widths={[400, 600]} sizes="(max-width: 767px) calc(100vw - 40px), 300px" />
+        <p>{site.footerCardText}</p>
+        <a class="text-link" href={quoteHref}>Request a quote <Icon name="arrow" /></a>
+      </div>
+
+      <div class="footer__col">
+        <h2 class="footer__title"><button type="button" aria-expanded="false" aria-controls="footer-contact" data-toggle data-toggle-media="(max-width: 767px)">Quick contact <Icon name="chevron-down" /></button></h2>
+        <div class="footer__panel" id="footer-contact">
+          <div class="footer__rows">
+            {phone && <a href={`tel:${phone.link}`}>Call sales <Icon name="phone" /></a>}
+            <a href={whatsapp} target="_blank" rel="noopener">WhatsApp <Icon name="whatsapp" /></a>
+            <a href={`mailto:${site.email}`}>Email <Icon name="mail" /></a>
+            {site.directionsUrl && <a href={site.directionsUrl} target="_blank" rel="noopener">Directions <Icon name="directions" /></a>}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer__legal">
+      <ul>
+        {MENU.map((m) => <li><a href={m.href}>{m.label}</a></li>)}
+        <li><a href="/privacy/" aria-current={legal === 'privacy' ? 'page' : undefined}>Privacy policy</a></li>
+        <li><a href="/terms/" aria-current={legal === 'terms' ? 'page' : undefined}>Terms of use</a></li>
+      </ul>
+      <div class="footer__meta">
+        <p>Copyright <span data-year>{new Date().getFullYear()}</span> {site.companyName}. All rights reserved.</p>
+        <p class="footer__credit">Designed and developed by <a href="https://gaa-tha.com/" target="_blank" rel="noopener">Gaatha</a></p>
+      </div>
+    </div>
+    <div class="footer__strip" aria-hidden="true"></div>
+  </footer>
+
+  <a class="fab" href={whatsapp} target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><Icon name="whatsapp" /></a>
+
+  <script is:inline src="/assets/js/media.js" defer></script>
+  <script is:inline src="/assets/js/nav.js" defer></script>
+  {scripts.map((s) => <script is:inline src={`/assets/js/${s}.js`} defer></script>)}
+</body>
+</html>

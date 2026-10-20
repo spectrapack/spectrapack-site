@@ -1,0 +1,31 @@
+---
+/**
+ * An image slot. With no image set (or a file not yet supplied) it shows the
+ * striped placeholder with a label instead of a broken picture.
+ */
+import { imageAttrs } from '../lib/image.js';
+import { localDimensions } from '../lib/content.js';
+
+interface Props {
+  image?: any;
+  class?: string;
+  label?: string;
+  sizes?: string;
+  widths?: number[];
+  loading?: 'lazy' | 'eager';
+  priority?: boolean;
+  /** Hero slides after the first: real src set by hero.js once the page has loaded. */
+  deferred?: boolean;
+  imgStyle?: string;
+  ariaHidden?: boolean;
+  attrs?: Record<string, any>;
+}
+const { image, class: cls, label = 'Image', sizes, widths, loading = 'lazy', priority = false, deferred = false, imgStyle, ariaHidden, attrs = {} } = Astro.props;
+const a = imageAttrs(image, await localDimensions(), widths ? { widths } : undefined);
+const srcAttrs = !a ? {} : deferred
+  ? { 'data-hero-src': a.src, 'data-hero-srcset': a.srcset }
+  : { src: a.src, srcset: a.srcset };
+---
+<span class:list={['media', cls, { 'is-missing': !a }]} aria-hidden={ariaHidden ? 'true' : undefined} {...attrs}><span class="media__label" aria-hidden="true"><b>{label}</b></span>{a && (
+  <img {...srcAttrs} sizes={a.srcset ? sizes : undefined} alt={a.alt} width={a.width} height={a.height} loading={priority ? 'eager' : loading} decoding="async" fetchpriority={priority ? 'high' : undefined} style={imgStyle} />
+)}</span>

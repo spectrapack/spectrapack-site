@@ -1,0 +1,29 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import Crumbs from '../components/Crumbs.astro';
+import { getDoc } from '../lib/content.js';
+import { nbsp } from '../lib/text.js';
+
+const site = await getDoc('siteSettings');
+const phone = site.phones?.[0];
+---
+<Base seo={{ title: `Thank you | ${site.companyName}`, description: `Your enquiry has reached ${site.companyName}. We will reply with a laminate, a format and a price.` }} noindex>
+  <section class="page-hero page-hero--band" aria-labelledby="page-title">
+    <div class="container">
+      <Crumbs items={[{ label: 'Home', href: '/' }, { label: 'Thank you' }]} />
+      <h1 class="page-hero__title page-hero__title--xl" id="page-title">Thank you, <span class="accent">we have your enquiry</span></h1>
+      <p class="page-hero__text">It has reached our sales team. We usually reply within one working day with a laminate, a format and a price.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container status-page">
+      <p class="status-page__text">If it is urgent, call us on {phone && <a href={`tel:${phone.link}`} set:html={nbsp(phone.label)} />} or message us on <a href={`https://wa.me/${site.whatsappNumber}`} target="_blank" rel="noopener">WhatsApp</a>.</p>
+      <div class="status-page__actions">
+        <a class="btn btn--solid" href="/products/"><span class="btn__dot"><Icon name="chevron" /></span>Browse products</a>
+        <a class="btn" href="/blog/"><span class="btn__dot"><Icon name="chevron" /></span>Read our guides</a>
+      </div>
+    </div>
+  </section>
+</Base>

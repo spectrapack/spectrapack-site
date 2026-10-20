@@ -1,0 +1,22 @@
+# Netlify redirects.
+#
+# 1. The first version of this site used .html addresses. Anyone who saved or
+#    shared one lands on the same page at its clean address. 301 = permanent.
+/index.html              /                    301!
+/about.html              /about/              301!
+/products.html           /products/           301!
+/industries.html         /industries/         301!
+/infrastructure.html     /infrastructure/     301!
+/contact.html            /contact/            301!
+/blog.html               /blog/               301!
+/privacy.html            /privacy/            301!
+/terms.html              /terms/              301!
+/thanks.html             /thanks/             301!
+
+# 2. Admin panel. It is a single-page app, so every path under /admin must
+#    serve the panel (200, a rewrite, not a redirect) or refreshing inside it
+#    would 404.
+#
+#    Do NOT add "/admin  /admin/  301!": Netlify already normalises trailing
+#    slashes and the two redirect to each other forever (found on Colortek).
+/admin/*                 /admin/index.html    200

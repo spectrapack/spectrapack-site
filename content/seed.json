@@ -1,0 +1,5287 @@
+[
+  {
+    "_id": "industry-food",
+    "_type": "industry",
+    "order": 1,
+    "title": "Food & FMCG",
+    "slug": {
+      "_type": "slug",
+      "current": "food"
+    },
+    "image": {
+      "_type": "image",
+      "_local": "industries/food.jpg",
+      "alt": "Snacks and spices in stand-up pouches"
+    },
+    "text": "Snacks, namkeen, spices, flours, pulses and dry fruit in barrier laminates that hold aroma in and keep moisture out."
+  },
+  {
+    "_id": "industry-beverage",
+    "_type": "industry",
+    "order": 2,
+    "title": "Beverages & liquids",
+    "slug": {
+      "_type": "slug",
+      "current": "beverage"
+    },
+    "image": {
+      "_type": "image",
+      "_local": "industries/beverage.jpg",
+      "alt": "Spout pouches and a coffee pouch with a valve"
+    },
+    "text": "Spout pouches for liquids and pastes, and degassing-valve pouches that let roasted coffee breathe."
+  },
+  {
+    "_id": "industry-stationery",
+    "_type": "industry",
+    "order": 3,
+    "title": "Stationery",
+    "slug": {
+      "_type": "slug",
+      "current": "stationery"
+    },
+    "image": {
+      "_type": "image",
+      "_local": "industries/stationery.jpg",
+      "alt": "Pencils and crayons in clear hanging bags"
+    },
+    "text": "Clear and printed side-seal bags with a euro punch and header for pencils, pens, crayons and notebooks."
+  },
+  {
+    "_id": "industry-electrical",
+    "_type": "industry",
+    "order": 4,
+    "title": "Electrical & electronics",
+    "slug": {
+      "_type": "slug",
+      "current": "electrical"
+    },
+    "image": {
+      "_type": "image",
+      "_local": "industries/electrical.jpg",
+      "alt": "Switches in printed pouches and a circuit board in an anti-static bag"
+    },
+    "text": "Printed pouches for switches and accessories, and anti-static bags for circuit boards and components."
+  },
+  {
+    "_id": "industry-pharma",
+    "_type": "industry",
+    "order": 5,
+    "title": "Pharma & healthcare",
+    "slug": {
+      "_type": "slug",
+      "current": "pharma"
+    },
+    "image": {
+      "_type": "image",
+      "_local": "industries/pharma.jpg",
+      "alt": "Foil sachets and powder pouches"
+    },
+    "text": "Odour-free solventless laminates and foil structures for sachets, powders and healthcare products."
+  },
+  {
+    "_id": "industry-agarbatti",
+    "_type": "industry",
+    "order": 6,
+    "title": "Agarbatti",
+    "slug": {
+      "_type": "slug",
+      "current": "agarbatti"
+    },
+    "image": {
+      "_type": "image",
+      "_local": "industries/agarbatti.jpg",
+      "alt": "Incense sticks in a perforated string of pouches"
+    },
+    "text": "Perforated strings of two to twenty pouches that hang in the shop and tear off one at a time."
+  },
+  {
+    "_id": "industry-hardware",
+    "_type": "industry",
+    "order": 7,
+    "title": "Adhesives, hardware & auto",
+    "slug": {
+      "_type": "slug",
+      "current": "hardware"
+    },
+    "image": {
+      "_type": "image",
+      "_local": "industries/hardware.jpg",
+      "alt": "Adhesive tubes and fasteners in heavy-gauge pouches"
+    },
+    "text": "Tough polyethylene and laminate pouches for adhesives, fasteners, tools and automobile spares."
+  },
+  {
+    "_id": "industry-personal",
+    "_type": "industry",
+    "order": 8,
+    "title": "Personal care, household & hosiery",
+    "slug": {
+      "_type": "slug",
+      "current": "personal"
+    },
+    "image": {
+      "_type": "image",
+      "_local": "industries/personal-care.jpg",
+      "alt": "Garments and wipes in printed carry bags"
+    },
+    "text": "Carry bags with loop or D-punch handles, and printed bags for garments, wipes and household goods."
+  },
+  {
+    "_id": "product-laminated-rolls",
+    "_type": "product",
+    "order": 1,
+    "title": "Plain & printed laminated rolls",
+    "slug": {
+      "_type": "slug",
+      "current": "laminated-rolls"
+    },
+    "image": {
+      "_type": "image",
+      "_local": "products/laminated-rolls.jpg",
+      "alt": "Reels of printed laminated film"
+    },
+    "summary": "Two, three and four-ply laminates on the reel, for brands that form and fill on their own machines.",
+    "formats": [
+      "roll"
+    ],
+    "features": [
+      "barrier"
+    ],
+    "industries": [
+      {
+        "_type": "reference",
+        "_ref": "industry-food",
+        "_key": "k0"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-beverage",
+        "_key": "k1"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-pharma",
+        "_key": "k2"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-personal",
+        "_key": "k3"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-hardware",
+        "_key": "k4"
+      }
+    ],
+    "keywords": "roll stock reel film laminate ffs",
+    "about": "Laminated film supplied on the reel, printed or unprinted, slit to the width of your form-fill-seal machine. The layers are chosen for the product: what has to be kept in, what has to be kept out, and how the pack is sealed.",
+    "listTitle": "Structures we run",
+    "listItems": [
+      "PET / LDPE",
+      "PET / foil / LDPE",
+      "PET / met PET / LDPE",
+      "PET / PET / LDPE",
+      "PET / BOPP / LDPE",
+      "BOPP / LDPE",
+      "BOPP / met PET / LDPE",
+      "CPP / LDPE"
+    ],
+    "offer": [
+      "Printing from 1 to 9 colours",
+      "Two, three or four plies",
+      "Printed or unprinted",
+      "Slit to your machine width",
+      "Structures for liquid packing"
+    ]
+  },
+  {
+    "_id": "product-three-side-seal",
+    "_type": "product",
+    "order": 2,
+    "title": "Three-side seal pouches",
+    "slug": {
+      "_type": "slug",
+      "current": "three-side-seal"
+    },
+    "image": {
+      "_type": "image",
+      "_local": "products/three-side-seal.jpg",
+      "alt": "Flat three-side seal pouches"
+    },
+    "summary": "The simple flat pouch: sealed on three sides, filled through the fourth and then heat sealed.",
+    "formats": [
+      "pouch"
+    ],
+    "features": [
+      "hang"
+    ],
+    "industries": [
+      {
+        "_type": "reference",
+        "_ref": "industry-food",
+        "_key": "k5"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-pharma",
+        "_key": "k6"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-stationery",
+        "_key": "k7"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-electrical",
+        "_key": "k8"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-hardware",
+        "_key": "k9"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-agarbatti",
+        "_key": "ka"
+      }
+    ],
+    "keywords": "3 side seal flat sachet tear notch",
+    "about": "A flat pouch sealed on three sides with the fourth left open for filling, then heat sealed. It is used widely for snacks, confectionery, pharmaceuticals and small hardware.",
+    "listTitle": "Why choose it",
+    "listItems": [
+      "Simple and economical",
+      "Takes little shelf and storage space",
+      "A sensible first format for a new brand",
+      "Tear notch for easy opening"
+    ],
+    "offer": [
+      "Any structure in PET, BOPP, met PET and polyethylene",
+      "Made to your size",
+      "Custom printing",
+      "Tear notch, D-cut, euro punch, handle or rivet",
+      "Open side sealed for you if required"
+    ]
+  },
+  {
+    "_id": "product-centre-seal",
+    "_type": "product",
+    "order": 3,
+    "title": "Centre seal pouches",
+    "slug": {
+      "_type": "slug",
+      "current": "centre-seal"
+    },
+    "image": {
+      "_type": "image",
+      "_local": "products/centre-seal.jpg",
+      "alt": "Pillow pouches with a centre seal"
+    },
+    "summary": "Pillow pouches sealed down the back, for powders up to 10 kg and solids or pastes up to 1 kg.",
+    "formats": [
+      "pouch"
+    ],
+    "features": [
+      "barrier"
+    ],
+    "industries": [
+      {
+        "_type": "reference",
+        "_ref": "industry-food",
+        "_key": "kb"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-pharma",
+        "_key": "kc"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-electrical",
+        "_key": "kd"
+      }
+    ],
+    "keywords": "center seal pillow pouch back seal atta flour pulses",
+    "about": "A lay-flat pillow pouch sealed down the centre of the back with a margin of about 20 mm. It suits powders up to 10 kg and solids or pastes up to 1 kg, and fits almost any product.",
+    "listTitle": "Why choose it",
+    "listItems": [
+      "Handles thick, heavy-duty laminates",
+      "No leakage at the corners",
+      "Tolerates high and low temperatures",
+      "Tamper-evident and water resistant",
+      "Suited to pulses, atta, suji and appliances"
+    ],
+    "offer": [
+      "Single layer to multi-layer structures",
+      "Made to your size",
+      "Custom printing, matte or gloss",
+      "Handle, rivet, D-cut or euro punch"
+    ]
+  },
+  {
+    "_id": "product-side-seal",
+    "_type": "product",
+    "order": 4,
+    "title": "Side seal pouches",
+    "slug": {
+      "_type": "slug",
+      "current": "side-seal"
+    },
+    "image": {
+      "_type": "image",
+      "_local": "products/side-seal.jpg",
+      "alt": "Clear side seal bags with a hang hole"
+    },
+    "summary": "Folded at the bottom and sealed at both sides, usually in clear BOPP or polyethylene.",
+    "formats": [
+      "pouch",
+      "bag"
+    ],
+    "features": [
+      "hang"
+    ],
+    "industries": [
+      {
+        "_type": "reference",
+        "_ref": "industry-stationery",
+        "_key": "ke"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-electrical",
+        "_key": "kf"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-personal",
+        "_key": "kg"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-food",
+        "_key": "kh"
+      }
+    ],
+    "keywords": "side sealing bopp bag header euro hole bakery hosiery",
+    "about": "A bag folded at the bottom and sealed down both sides, with the top left open for filling. It is the everyday pack for stationery, hosiery, bakery and electrical accessories.",
+    "listTitle": "Why choose it",
+    "listItems": [
+      "Clear, crisp presentation",
+      "Simple to fill and close",
+      "Economical for high volumes",
+      "Hangs neatly on a peg"
+    ],
+    "offer": [
+      "Single-layer BOPP, LDPE or HDPE film",
+      "Laminated PET/PP, PET/LDPE and BOPP/LDPE",
+      "Special designs for the electrical market",
+      "Euro punch, hole punch or pearl header",
+      "Custom printing"
+    ]
+  },
+  {
+    "_id": "product-bottom-seal",
+    "_type": "product",
+    "order": 5,
+    "title": "Bottom seal pouches",
+    "slug": {
+      "_type": "slug",
+      "current": "bottom-seal"
+    },
+    "image": {
+      "_type": "image",
+      "_local": "products/bottom-seal.jpg",
+      "alt": "Polyethylene bottom seal bags"
+    },
+    "summary": "Made from tube film and sealed along the bottom, in PP, LDPE or HDPE.",
+    "formats": [
+      "bag"
+    ],
+    "features": [],
+    "industries": [
+      {
+        "_type": "reference",
+        "_ref": "industry-food",
+        "_key": "ki"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-personal",
+        "_key": "kj"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-hardware",
+        "_key": "kk"
+      }
+    ],
+    "keywords": "bottom sealing tube polythene polyethylene bakery frozen",
+    "about": "A bag made from a tube of PP, LDPE or HDPE film, sealed along the bottom and left open at the top. It is used for bakery goods, frozen food, grocery and general packing.",
+    "listTitle": "Why choose it",
+    "listItems": [
+      "Strong seamless sides",
+      "Simple to fill and close",
+      "Economical for bulk goods",
+      "Suits soft, flexible films"
+    ],
+    "offer": [
+      "Single-layer PP, LDPE or HDPE film",
+      "Made to your size",
+      "Custom printing",
+      "Euro punch, hole punch or pearl header"
+    ]
+  },
+  {
+    "_id": "product-standup-zipper",
+    "_type": "product",
+    "order": 6,
+    "title": "Stand-up & zipper pouches",
+    "slug": {
+      "_type": "slug",
+      "current": "standup-zipper"
+    },
+    "image": {
+      "_type": "image",
+      "_local": "products/standup-zipper.jpg",
+      "alt": "Stand-up pouches with zippers"
+    },
+    "summary": "Stands on its own bottom gusset and recloses with a zipper. Sizes from 50 g to 10 kg.",
+    "formats": [
+      "pouch"
+    ],
+    "features": [
+      "zipper",
+      "standup",
+      "barrier"
+    ],
+    "industries": [
+      {
+        "_type": "reference",
+        "_ref": "industry-food",
+        "_key": "kl"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-beverage",
+        "_key": "km"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-pharma",
+        "_key": "kn"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-personal",
+        "_key": "ko"
+      }
+    ],
+    "keywords": "stand up standup doypack zip lock resealable window",
+    "about": "A pouch that stands upright on its bottom gusset and, with a zipper, can be opened and closed again. It takes little shelf space and replaces a jar or a bag-in-box for snacks, dry fruit, pulses and cereals.",
+    "listTitle": "Why choose it",
+    "listItems": [
+      "Light and easy to carry",
+      "High oxygen and moisture barrier",
+      "Less storage space than a jar",
+      "Recloses with a zipper",
+      "Shapes and sizes made to order"
+    ],
+    "offer": [
+      "Matte, gloss and shiny finishes",
+      "Structures in PET, BOPP, met PET and polyethylene",
+      "Sizes from 50 g to 10 kg",
+      "Window to show the product",
+      "Notch, handle, spout, D-cut or euro punch",
+      "Three-side seal pouch with zipper"
+    ]
+  },
+  {
+    "_id": "product-vacuum",
+    "_type": "product",
+    "order": 7,
+    "title": "Vacuum pouches",
+    "slug": {
+      "_type": "slug",
+      "current": "vacuum"
+    },
+    "image": {
+      "_type": "image",
+      "_local": "products/vacuum.jpg",
+      "alt": "Vacuum-packed nuts in clear pouches"
+    },
+    "summary": "Air is drawn out before sealing, which keeps dry fruit, nuts and frozen food fresh for longer.",
+    "formats": [
+      "pouch"
+    ],
+    "features": [
+      "barrier"
+    ],
+    "industries": [
+      {
+        "_type": "reference",
+        "_ref": "industry-food",
+        "_key": "kp"
+      }
+    ],
+    "keywords": "vacuum nylon frozen meat dairy dry fruit",
+    "about": "A pouch built to be sealed after the air has been removed, so that the contents are kept away from moisture and oxygen. It is used for dry fruit and nuts, frozen items, meat and dairy.",
+    "listTitle": "Why choose it",
+    "listItems": [
+      "Longer shelf life",
+      "Moisture barrier",
+      "Excellent clarity",
+      "Resists puncture and tearing",
+      "Holds aroma, freshness and flavour"
+    ],
+    "offer": [
+      "Nylon / polyethylene and PET structures",
+      "Made to your size",
+      "Custom printing",
+      "Tear notch on request"
+    ]
+  },
+  {
+    "_id": "product-spout-valve",
+    "_type": "product",
+    "order": 8,
+    "title": "Spout & degassing valve pouches",
+    "slug": {
+      "_type": "slug",
+      "current": "spout-valve"
+    },
+    "image": {
+      "_type": "image",
+      "_local": "products/spout-valve.jpg",
+      "alt": "A spout pouch and a coffee pouch with a valve"
+    },
+    "summary": "A welded spout and cap for liquids, or a one-way valve that lets roasted coffee breathe.",
+    "formats": [
+      "pouch"
+    ],
+    "features": [
+      "spout",
+      "standup"
+    ],
+    "industries": [
+      {
+        "_type": "reference",
+        "_ref": "industry-beverage",
+        "_key": "kq"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-food",
+        "_key": "kr"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-personal",
+        "_key": "ks"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-hardware",
+        "_key": "kt"
+      }
+    ],
+    "keywords": "spout cap liquid valve coffee degassing pour",
+    "about": "Spout pouches carry a welded pour spout and cap, making a light, unbreakable alternative to a bottle for liquids and pastes. Valve pouches carry a one-way degassing valve, the standard pack for roasted coffee.",
+    "listTitle": "Why choose it",
+    "listItems": [
+      "Recloses after pouring",
+      "Pours cleanly",
+      "Lighter and cheaper to ship than a bottle",
+      "Will not shatter",
+      "Valve keeps coffee fresh"
+    ],
+    "offer": [
+      "Leak-proof seals",
+      "Puncture-resistant laminates",
+      "Matte, gloss and shiny finishes",
+      "Made to your size",
+      "Custom printing"
+    ]
+  },
+  {
+    "_id": "product-shaped",
+    "_type": "product",
+    "order": 9,
+    "title": "Shaped pouches",
+    "slug": {
+      "_type": "slug",
+      "current": "shaped"
+    },
+    "image": {
+      "_type": "image",
+      "_local": "products/shaped.jpg",
+      "alt": "Pouches die-cut into custom shapes"
+    },
+    "summary": "Die-cut to the outline your brand wants, so the pack stands out on a crowded shelf.",
+    "formats": [
+      "pouch"
+    ],
+    "features": [
+      "standup"
+    ],
+    "industries": [
+      {
+        "_type": "reference",
+        "_ref": "industry-beverage",
+        "_key": "ku"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-food",
+        "_key": "kv"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-personal",
+        "_key": "kw"
+      }
+    ],
+    "keywords": "shape die cut custom outline",
+    "about": "A pouch die-cut to a custom outline, with the fitments the product needs. It is used for beverages, food and confectionery where the shape itself carries the brand.",
+    "listTitle": "Why choose it",
+    "listItems": [
+      "Stands out on the shelf",
+      "Reinforces the brand",
+      "Can be made to stand up",
+      "Leak and puncture resistant",
+      "Suits hot and cold beverages"
+    ],
+    "offer": [
+      "Shapes and sizes made to order",
+      "Laminate chosen for the product",
+      "Gravure printing up to 9 colours",
+      "Zipper, spout, notch, D-cut, euro slot or rivet"
+    ]
+  },
+  {
+    "_id": "product-perforation",
+    "_type": "product",
+    "order": 10,
+    "title": "Perforation pouches",
+    "slug": {
+      "_type": "slug",
+      "current": "perforation"
+    },
+    "image": {
+      "_type": "image",
+      "_local": "products/perforation.jpg",
+      "alt": "A string of small pouches joined by perforations"
+    },
+    "summary": "Strings of two to twenty small pouches that hang in the shop and tear off one at a time.",
+    "formats": [
+      "pouch"
+    ],
+    "features": [
+      "hang"
+    ],
+    "industries": [
+      {
+        "_type": "reference",
+        "_ref": "industry-agarbatti",
+        "_key": "kx"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-stationery",
+        "_key": "ky"
+      }
+    ],
+    "keywords": "perforated string strip agarbatti incense imitation jewellery",
+    "about": "Small pouches made as a connected string with a perforated tear line between each one, so that a strip can hang in a shop and be sold pouch by pouch. It is the usual pack for agarbatti and is also used for imitation jewellery and stationery.",
+    "listTitle": "Why choose it",
+    "listItems": [
+      "Tears off cleanly",
+      "Displays well hanging",
+      "Economical for small items",
+      "Easier to stock than loose pouches"
+    ],
+    "offer": [
+      "Strings of 2 to 20 pouches",
+      "Matte, gloss and shiny finishes",
+      "Made to your size",
+      "Custom printing"
+    ]
+  },
+  {
+    "_id": "product-antistatic-barrier",
+    "_type": "product",
+    "order": 11,
+    "title": "Anti-static & high barrier pouches",
+    "slug": {
+      "_type": "slug",
+      "current": "antistatic-barrier"
+    },
+    "image": {
+      "_type": "image",
+      "_local": "products/antistatic-barrier.jpg",
+      "alt": "A circuit board in a silver anti-static bag"
+    },
+    "summary": "Static-dissipating bags for electronics, and multi-layer pouches that block oxygen, moisture and light.",
+    "formats": [
+      "pouch"
+    ],
+    "features": [
+      "antistatic",
+      "barrier"
+    ],
+    "industries": [
+      {
+        "_type": "reference",
+        "_ref": "industry-electrical",
+        "_key": "kz"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-food",
+        "_key": "k10"
+      }
+    ],
+    "keywords": "anti static esd pcb electronics metallic barrier coffee",
+    "about": "Anti-static pouches are made from film that bleeds away static charge, so that circuit boards and components are not damaged by electrostatic discharge. High barrier pouches use multi-layer laminates to keep out oxygen, moisture, light and odour.",
+    "listTitle": "Why choose it",
+    "listItems": [
+      "Protects boards, cartridges and components",
+      "Tear resistant",
+      "Extends shelf life",
+      "Holds flavour and aroma",
+      "Suits vacuum and gas-flushed packing"
+    ],
+    "offer": [
+      "Three-side seal, centre seal, stand-up and zipper formats",
+      "Plain metallic pouches",
+      "Matte, gloss and shiny finishes",
+      "Made to your size",
+      "Custom printing"
+    ]
+  },
+  {
+    "_id": "product-courier-carry",
+    "_type": "product",
+    "order": 12,
+    "title": "Courier & carry bags",
+    "slug": {
+      "_type": "slug",
+      "current": "courier-carry"
+    },
+    "image": {
+      "_type": "image",
+      "_local": "products/courier-carry.jpg",
+      "alt": "Courier bags and a carry bag with a loop handle"
+    },
+    "summary": "Tamper-evident courier bags and printed carry bags with a loop or D-punch handle.",
+    "formats": [
+      "bag"
+    ],
+    "features": [
+      "hang"
+    ],
+    "industries": [
+      {
+        "_type": "reference",
+        "_ref": "industry-personal",
+        "_key": "k11"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-hardware",
+        "_key": "k12"
+      }
+    ],
+    "keywords": "courier mailer carry bag loop handle d punch hosiery garment",
+    "about": "Courier bags are made from strong LDPE with a permanent adhesive strip, a surface that takes a marker and a clear pocket for the consignment note. Carry bags are made from the same film with a loop or D-punch handle, and are widely used by hosiery and garment brands.",
+    "listTitle": "Why choose it",
+    "listItems": [
+      "Cannot be opened without tearing",
+      "Light, so postage stays low",
+      "Waterproof and durable",
+      "A printed bag advertises the brand"
+    ],
+    "offer": [
+      "Plain or custom printed",
+      "Loop or D-punch handle",
+      "Matte, gloss and shiny finishes",
+      "Made to your size"
+    ]
+  },
+  {
+    "_id": "product-nylon-bopa",
+    "_type": "product",
+    "order": 13,
+    "title": "Nylon / BOPA & PVDC-coated laminates",
+    "slug": {
+      "_type": "slug",
+      "current": "nylon-bopa"
+    },
+    "image": {
+      "_type": "image",
+      "_local": "products/nylon-bopa.jpg",
+      "alt": "Clear nylon laminate film on a reel"
+    },
+    "summary": "Clear, tough, puncture-resistant films with a low oxygen transmission rate.",
+    "formats": [
+      "roll"
+    ],
+    "features": [
+      "barrier"
+    ],
+    "industries": [
+      {
+        "_type": "reference",
+        "_ref": "industry-food",
+        "_key": "k13"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-pharma",
+        "_key": "k14"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-beverage",
+        "_key": "k15"
+      }
+    ],
+    "keywords": "nylon bopa polyamide pvdc retort frozen liquid dairy",
+    "about": "Nylon (BOPA) film is clear and mechanically very strong, with low oxygen and odour transmission and good performance in the cold. It is normally laminated to polyethylene and used where a pack must survive puncture, freezing or vacuum.",
+    "listTitle": "Where it is used",
+    "listItems": [
+      "Frozen food",
+      "Vacuum and modified-atmosphere packs",
+      "Liquid and dairy packing",
+      "Pharma packing",
+      "Agricultural products"
+    ],
+    "offer": [
+      "Gauges from 10 to 30 micron",
+      "Plain, metallised and PVDC-coated grades",
+      "One or two sides treated",
+      "Laminated to LLDPE"
+    ]
+  },
+  {
+    "_id": "product-aluminium-foil",
+    "_type": "product",
+    "order": 14,
+    "title": "Aluminium foil pouches",
+    "slug": {
+      "_type": "slug",
+      "current": "aluminium-foil"
+    },
+    "image": {
+      "_type": "image",
+      "_local": "products/aluminium-foil.jpg",
+      "alt": "Silver aluminium foil pouches"
+    },
+    "summary": "A foil layer in the laminate gives the highest barrier to light, oxygen and moisture.",
+    "formats": [
+      "pouch"
+    ],
+    "features": [
+      "barrier",
+      "standup",
+      "zipper"
+    ],
+    "industries": [
+      {
+        "_type": "reference",
+        "_ref": "industry-food",
+        "_key": "k16"
+      },
+      {
+        "_type": "reference",
+        "_ref": "industry-pharma",
+        "_key": "k17"
+      }
+    ],
+    "keywords": "aluminum foil alu silver barrier zipper",
+    "about": "A pouch whose laminate includes a layer of aluminium foil, the strongest barrier to light, oxygen and moisture. It can be made flat or as a stand-up pouch, with a zipper if the pack has to reclose.",
+    "listTitle": "Why choose it",
+    "listItems": [
+      "Highest oxygen and moisture barrier",
+      "Blocks light completely",
+      "Takes little storage space",
+      "Light, with a premium look"
+    ],
+    "offer": [
+      "Sizes from 50 g to 10 kg",
+      "Made to your size and shape",
+      "Custom printing",
+      "Zipper, notch, handle, spout, D-cut or euro punch",
+      "Window to show the product"
+    ]
+  },
+  {
+    "_id": "machine-rotogravure",
+    "_type": "machine",
+    "order": 1,
+    "title": "9 colour rotogravure printing machine",
+    "image": {
+      "_type": "image",
+      "_local": "infrastructure/machine-rotogravure.jpg",
+      "alt": "9 colour rotogravure printing machine"
+    },
+    "description": "The main press. It prints your design onto the film, with web video and automatic register control to hold the print in position.",
+    "specs": [
+      "9 colours",
+      "1,200 mm",
+      "300 m/min",
+      "5-drive system"
+    ]
+  },
+  {
+    "_id": "machine-flexo",
+    "_type": "machine",
+    "order": 2,
+    "title": "6 colour flexo machine",
+    "image": {
+      "_type": "image",
+      "_local": "infrastructure/machine-flexo.jpg",
+      "alt": "6 colour flexo machine"
+    },
+    "description": "A second, simpler press for polyethylene and polypropylene bags. It prints the front and the back in one pass.",
+    "specs": [
+      "6 colours",
+      "15 inch print",
+      "Tube + sheet film"
+    ]
+  },
+  {
+    "_id": "machine-inspection",
+    "_type": "machine",
+    "order": 3,
+    "title": "Doctoring and inspection machine",
+    "image": {
+      "_type": "image",
+      "_local": "infrastructure/machine-inspection.jpg",
+      "alt": "Doctoring and inspection machine"
+    },
+    "description": "The quality check. It runs the printed roll past an inspection system and stops by itself when it finds a misprint.",
+    "specs": [
+      "1,200 mm",
+      "400 m/min",
+      "Auto detect + stop"
+    ]
+  },
+  {
+    "_id": "machine-lamination",
+    "_type": "machine",
+    "order": 4,
+    "title": "Combi lamination machine",
+    "image": {
+      "_type": "image",
+      "_local": "infrastructure/machine-lamination.jpg",
+      "alt": "Combi lamination machine"
+    },
+    "description": "Bonds layers of film together. \"Combi\" means it runs both adhesive types, including the odourless solventless one.",
+    "specs": [
+      "1,100 mm",
+      "350 m/min",
+      "PET, foil, nylon, PE, PP, paper"
+    ]
+  },
+  {
+    "_id": "machine-slitting",
+    "_type": "machine",
+    "order": 5,
+    "title": "Slitting machine",
+    "image": {
+      "_type": "image",
+      "_local": "infrastructure/machine-slitting.jpg",
+      "alt": "Slitting machine"
+    },
+    "description": "Cuts a wide roll into narrower rolls. Drum and cantilever slitting handle every film and laminate we run.",
+    "specs": [
+      "1,100 mm",
+      "400 m/min",
+      "Shaftless unwind + rewind"
+    ]
+  },
+  {
+    "_id": "machine-pouching",
+    "_type": "machine",
+    "order": 6,
+    "title": "Pouching and cutting machine",
+    "image": {
+      "_type": "image",
+      "_local": "infrastructure/machine-pouching.jpg",
+      "alt": "Pouching and cutting machine"
+    },
+    "description": "Turns flat film into three-side seal and centre seal pouches, with attachments for zippers, gussets and punches.",
+    "specs": [
+      "200 strokes/min",
+      "Zipper + stand-up",
+      "D-cut, V-notch, euro punch"
+    ]
+  },
+  {
+    "_id": "machine-side-seal",
+    "_type": "machine",
+    "order": 7,
+    "title": "Side sealing pouching machine",
+    "image": {
+      "_type": "image",
+      "_local": "infrastructure/machine-side-seal.jpg",
+      "alt": "Side sealing pouching machine"
+    },
+    "description": "Makes side seal pouches, including very small ones. The fastest of the pouching machines.",
+    "specs": [
+      "300 strokes/min",
+      "Cuts from 50 mm",
+      "Tape attachment"
+    ]
+  },
+  {
+    "_id": "machine-bottom-seal",
+    "_type": "machine",
+    "order": 8,
+    "title": "Bottom seal machine",
+    "image": {
+      "_type": "image",
+      "_local": "infrastructure/machine-bottom-seal.jpg",
+      "alt": "Bottom seal machine"
+    },
+    "description": "Makes bags sealed along the bottom from the softer films: LDPE, HDPE and polypropylene.",
+    "specs": [
+      "200 strokes/min",
+      "LDPE, HDPE, PP",
+      "Centre slitting"
+    ]
+  },
+  {
+    "_id": "machine-spout",
+    "_type": "machine",
+    "order": 9,
+    "title": "Spout fixing machine",
+    "image": {
+      "_type": "image",
+      "_local": "infrastructure/machine-spout.jpg",
+      "alt": "Spout fixing machine"
+    },
+    "description": "Welds the plastic spout and cap onto a liquid pouch. A semi-automatic machine alongside fits soft loop handles.",
+    "specs": [
+      "Spout + cap",
+      "Soft loop handles"
+    ]
+  },
+  {
+    "_id": "client-gm",
+    "_type": "client",
+    "order": 1,
+    "name": "GM",
+    "logo": {
+      "_type": "image",
+      "_local": "clients/gm.svg"
+    }
+  },
+  {
+    "_id": "client-goldmedal",
+    "_type": "client",
+    "order": 2,
+    "name": "Goldmedal",
+    "logo": {
+      "_type": "image",
+      "_local": "clients/goldmedal.svg"
+    }
+  },
+  {
+    "_id": "client-cello",
+    "_type": "client",
+    "order": 3,
+    "name": "Cello",
+    "logo": {
+      "_type": "image",
+      "_local": "clients/cello.svg"
+    }
+  },
+  {
+    "_id": "client-doms",
+    "_type": "client",
+    "order": 4,
+    "name": "DOMS",
+    "logo": {
+      "_type": "image",
+      "_local": "clients/doms.svg"
+    }
+  },
+  {
+    "_id": "client-flair",
+    "_type": "client",
+    "order": 5,
+    "name": "Flair",
+    "logo": {
+      "_type": "image",
+      "_local": "clients/flair.svg"
+    }
+  },
+  {
+    "_id": "client-apsara",
+    "_type": "client",
+    "order": 6,
+    "name": "Apsara",
+    "logo": {
+      "_type": "image",
+      "_local": "clients/apsara.svg"
+    }
+  },
+  {
+    "_id": "client-charliee",
+    "_type": "client",
+    "order": 7,
+    "name": "Charliee",
+    "logo": {
+      "_type": "image",
+      "_local": "clients/charliee.svg"
+    }
+  },
+  {
+    "_id": "client-badshah",
+    "_type": "client",
+    "order": 8,
+    "name": "Badshah",
+    "logo": {
+      "_type": "image",
+      "_local": "clients/badshah.svg"
+    }
+  },
+  {
+    "_id": "client-ruchi-foodline",
+    "_type": "client",
+    "order": 9,
+    "name": "Ruchi Foodline",
+    "logo": {
+      "_type": "image",
+      "_local": "clients/ruchi-foodline.svg"
+    }
+  },
+  {
+    "_id": "client-babyhug-home",
+    "_type": "client",
+    "order": 10,
+    "name": "Babyhug Home",
+    "logo": {
+      "_type": "image",
+      "_local": "clients/babyhug-home.svg"
+    }
+  },
+  {
+    "_id": "client-rb",
+    "_type": "client",
+    "order": 11,
+    "name": "RB",
+    "logo": {
+      "_type": "image",
+      "_local": "clients/rb.svg"
+    }
+  },
+  {
+    "_id": "client-vms",
+    "_type": "client",
+    "order": 12,
+    "name": "VMS",
+    "logo": {
+      "_type": "image",
+      "_local": "clients/vms.svg"
+    }
+  },
+  {
+    "_id": "client-dc",
+    "_type": "client",
+    "order": 13,
+    "name": "DC",
+    "logo": {
+      "_type": "image",
+      "_local": "clients/dc.svg"
+    }
+  },
+  {
+    "_id": "client-anchor-panasonic",
+    "_type": "client",
+    "order": 14,
+    "name": "Anchor by Panasonic",
+    "logo": {
+      "_type": "image",
+      "_local": "clients/anchor-panasonic.svg"
+    }
+  },
+  {
+    "_id": "client-keya",
+    "_type": "client",
+    "order": 15,
+    "name": "Keya",
+    "logo": {
+      "_type": "image",
+      "_local": "clients/keya.svg"
+    }
+  },
+  {
+    "_id": "post-laminate-layers-and-shelf-life",
+    "_type": "blogPost",
+    "order": 1,
+    "title": "PET, foil, polyethylene: how the layers in a laminate decide shelf life",
+    "slug": {
+      "_type": "slug",
+      "current": "laminate-layers-and-shelf-life"
+    },
+    "category": "materials",
+    "tags": [
+      "Materials",
+      "Shelf life"
+    ],
+    "excerpt": "No single film prints well, blocks air and seals cleanly. A laminate gives each job to a different layer, and the choice of layers decides how long your product keeps.",
+    "readMinutes": 4,
+    "image": {
+      "_type": "image",
+      "_local": "home/guide-laminate.jpg",
+      "alt": "Three film layers peeled apart to show a laminate"
+    },
+    "body": [
+      {
+        "_key": "laminap0b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "laminap0b0s0",
+            "_type": "span",
+            "text": "Pick up almost any printed pouch and you are holding two or three films bonded into one sheet. It looks like a single material, but each layer is there for a different reason, and choosing them is the most important decision in a packaging job.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "laminap1b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "laminap1b0s0",
+            "_type": "span",
+            "text": "Why one film is not enough",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "laminap2b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "laminap2b0s0",
+            "_type": "span",
+            "text": "A pack has to do three things: carry the print, protect the product and seal shut. No single plastic does all three well. Polyester prints beautifully but will not heat seal to itself. Polyethylene seals easily but stretches on the press and lets oxygen through. Aluminium foil blocks almost everything but tears and cannot be sealed at all. Lamination puts the three together so each one covers for the others.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "laminap3b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "laminap3b0s0",
+            "_type": "span",
+            "text": "The three jobs",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "laminap4b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "laminap4b0s0",
+            "_type": "span",
+            "text": "The outer layer carries the print.",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "laminap4b0s1",
+            "_type": "span",
+            "text": " This is usually PET or BOPP: stiff, clear and stable under heat. The ink is printed on the inside face, so it ends up sandwiched between layers and cannot scuff or touch the product.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "laminap4b1",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "laminap4b1s0",
+            "_type": "span",
+            "text": "The middle layer is the barrier.",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "laminap4b1s1",
+            "_type": "span",
+            "text": " Aluminium foil, metallised PET or nylon sits here to keep out oxygen, moisture and light. Packs for products that are not sensitive can leave this layer out.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "laminap4b2",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "laminap4b2s0",
+            "_type": "span",
+            "text": "The inner layer makes the seal.",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "laminap4b2s1",
+            "_type": "span",
+            "text": " Polyethylene or cast polypropylene melts at a lower temperature than the outer layers, so the sealing jaws can weld the pouch shut without damaging the print. It is also the layer that touches the product.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "laminap5b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "laminap5b0s0",
+            "_type": "span",
+            "text": "Common structures and where they are used",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "laminax6",
+        "_type": "table",
+        "rows": [
+          {
+            "_key": "laminar60",
+            "_type": "row",
+            "cells": [
+              "Structure",
+              "What it gives you",
+              "Typical use"
+            ]
+          },
+          {
+            "_key": "laminar61",
+            "_type": "row",
+            "cells": [
+              "BOPP / LDPE",
+              "Clarity and economy",
+              "Bakery, stationery, dry goods with a short shelf life"
+            ]
+          },
+          {
+            "_key": "laminar62",
+            "_type": "row",
+            "cells": [
+              "PET / LDPE",
+              "Stiffness and good print",
+              "Pulses, flours, general grocery"
+            ]
+          },
+          {
+            "_key": "laminar63",
+            "_type": "row",
+            "cells": [
+              "PET / met PET / LDPE",
+              "Light and moisture barrier",
+              "Snacks, namkeen, spices"
+            ]
+          },
+          {
+            "_key": "laminar64",
+            "_type": "row",
+            "cells": [
+              "PET / foil / LDPE",
+              "The highest barrier",
+              "Coffee, pharma powders, products with a long shelf life"
+            ]
+          },
+          {
+            "_key": "laminar65",
+            "_type": "row",
+            "cells": [
+              "Nylon / LDPE",
+              "Puncture resistance",
+              "Vacuum packs, frozen food, liquids"
+            ]
+          }
+        ],
+        "headerRow": true
+      },
+      {
+        "_key": "laminax7",
+        "_type": "note",
+        "title": "A note on odour.",
+        "body": [
+          {
+            "_key": "laminan7b0",
+            "_type": "block",
+            "style": "normal",
+            "markDefs": [
+              {
+                "_key": "laminan7b0l0",
+                "_type": "link",
+                "href": "/infrastructure/#laminate"
+              }
+            ],
+            "children": [
+              {
+                "_key": "laminan7b0s0",
+                "_type": "span",
+                "text": "Lamination adhesives can be solvent based or solventless. Solventless lamination leaves no residual smell, which is why it is the usual choice for food and pharmaceutical packs. Our ",
+                "marks": []
+              },
+              {
+                "_key": "laminan7b0s1",
+                "_type": "span",
+                "text": "combi laminator",
+                "marks": [
+                  "laminan7b0l0"
+                ]
+              },
+              {
+                "_key": "laminan7b0s2",
+                "_type": "span",
+                "text": " runs both.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "_key": "laminap8b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "laminap8b0s0",
+            "_type": "span",
+            "text": "What to tell your converter",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "laminap9b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "laminap9b0s0",
+            "_type": "span",
+            "text": "You do not need to specify the structure yourself. Tell us what the product is, the fill weight, the shelf life you are aiming for, how the pack will be filled and how it will be stored and sold. From that we can propose a laminate and explain what each layer is doing in it.",
+            "marks": []
+          }
+        ]
+      }
+    ],
+    "related": [
+      {
+        "_type": "reference",
+        "_ref": "post-anti-static-pouches-for-electronics",
+        "_key": "laminarel0"
+      },
+      {
+        "_type": "reference",
+        "_ref": "post-why-a-first-order-has-a-minimum",
+        "_key": "laminarel1"
+      },
+      {
+        "_type": "reference",
+        "_ref": "post-artwork-for-gravure-cylinders",
+        "_key": "laminarel2"
+      }
+    ],
+    "seo": {
+      "title": "PET, foil, polyethylene: how the layers in a laminate decide shelf life | Spectra Pack",
+      "description": "No single film prints well, blocks air and seals cleanly. A laminate gives each job to a different layer, and the choice of layers decides how long your product keeps."
+    }
+  },
+  {
+    "_id": "post-why-a-first-order-has-a-minimum",
+    "_type": "blogPost",
+    "order": 2,
+    "title": "Why a first order has a minimum and a repeat order costs less",
+    "slug": {
+      "_type": "slug",
+      "current": "why-a-first-order-has-a-minimum"
+    },
+    "category": "ordering",
+    "tags": [
+      "Ordering",
+      "Cylinders"
+    ],
+    "excerpt": "Gravure printing starts with engraved cylinders, one for every colour. They are the reason a first order has a floor, and the reason the second one is cheaper.",
+    "readMinutes": 3,
+    "image": {
+      "_type": "image",
+      "_local": "home/guide-minimum.jpg",
+      "alt": "An engraved gravure cylinder close up"
+    },
+    "body": [
+      {
+        "_key": "why-a-p0b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "why-a-p0b0s0",
+            "_type": "span",
+            "text": "New brands often ask why they cannot order five hundred printed pouches. The answer sits on a rack in the press room: a set of engraved metal cylinders that has to be made before a single pouch can be printed.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "why-a-p1b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "why-a-p1b0s0",
+            "_type": "span",
+            "text": "One cylinder for every colour",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "why-a-p2b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "why-a-p2b0s0",
+            "_type": "span",
+            "text": "In rotogravure printing your artwork is engraved into the surface of a steel cylinder as millions of tiny cells. The cylinder turns through a tray of ink, a blade wipes the surface clean, and the ink left in the cells transfers to the film. Each colour in the design needs its own cylinder, so a nine-colour job needs nine.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "why-a-p3b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "why-a-p3b0s0",
+            "_type": "span",
+            "text": "Engraving is a fixed cost. It is the same whether you print five thousand pouches or five hundred thousand.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "why-a-p4b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "why-a-p4b0s0",
+            "_type": "span",
+            "text": "Why that creates a minimum",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "why-a-p5b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "why-a-p5b0s0",
+            "_type": "span",
+            "text": "Two costs do not shrink with the order. The first is the cylinders. The second is make-ready: every job uses a length of film while the press is brought into register and the colours are matched to the approved shade. Spread over a large run, both are small. Spread over a very small run, they would cost more than the pouches themselves. The minimum order is simply the point at which the job makes sense for both sides.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "why-a-p6b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "why-a-p6b0s0",
+            "_type": "span",
+            "text": "Why the repeat is cheaper",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "why-a-p7b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "why-a-p7b0s0",
+            "_type": "span",
+            "text": "Once the cylinders exist, they can be used again. A repeat order pays for film, ink and press time, but not for engraving. It also prints from the same cylinders as the first run, which is what keeps the colour consistent from one delivery to the next.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "why-a-x8",
+        "_type": "note",
+        "title": "How we keep first runs small.",
+        "body": [
+          {
+            "_key": "why-a-n8b0",
+            "_type": "block",
+            "style": "normal",
+            "markDefs": [
+              {
+                "_key": "why-a-n8b0l0",
+                "_type": "link",
+                "href": "/infrastructure/#print"
+              }
+            ],
+            "children": [
+              {
+                "_key": "why-a-n8b0s0",
+                "_type": "span",
+                "text": "When several variants share a layout, we plan the artwork so that only one cylinder or one colour changes between them. That is how a new flavour can start at around 5,000 pouches on our ",
+                "marks": []
+              },
+              {
+                "_key": "why-a-n8b0s1",
+                "_type": "span",
+                "text": "9-colour press",
+                "marks": [
+                  "why-a-n8b0l0"
+                ]
+              },
+              {
+                "_key": "why-a-n8b0s2",
+                "_type": "span",
+                "text": " without a full new set of cylinders.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "_key": "why-a-p9b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "why-a-p9b0s0",
+            "_type": "span",
+            "text": "Three ways to bring your first order down",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "why-a-p10b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "why-a-p10b0s0",
+            "_type": "span",
+            "text": "Share a layout across variants.",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "why-a-p10b0s1",
+            "_type": "span",
+            "text": " Keep the design common and change only the flavour name or a colour band.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "why-a-p10b1",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "why-a-p10b1s0",
+            "_type": "span",
+            "text": "Use fewer colours.",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "why-a-p10b1s1",
+            "_type": "span",
+            "text": " Every colour you remove is a cylinder you do not pay for.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "why-a-p10b2",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "why-a-p10b2s0",
+            "_type": "span",
+            "text": "Standardise the pouch size.",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "why-a-p10b2s1",
+            "_type": "span",
+            "text": " Variants in the same size can run together and share the set-up.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "why-a-p11b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [
+          {
+            "_key": "why-a-p11b0l0",
+            "_type": "link",
+            "href": "/contact/#enquiry"
+          }
+        ],
+        "children": [
+          {
+            "_key": "why-a-p11b0s0",
+            "_type": "span",
+            "text": "If you are planning a range, ",
+            "marks": []
+          },
+          {
+            "_key": "why-a-p11b0s1",
+            "_type": "span",
+            "text": "talk to us before the design is final",
+            "marks": [
+              "why-a-p11b0l0"
+            ]
+          },
+          {
+            "_key": "why-a-p11b0s2",
+            "_type": "span",
+            "text": ". A small change at the artwork stage can take a meaningful amount off the first order.",
+            "marks": []
+          }
+        ]
+      }
+    ],
+    "related": [
+      {
+        "_type": "reference",
+        "_ref": "post-roll-stock-or-finished-pouches",
+        "_key": "why-a-rel0"
+      },
+      {
+        "_type": "reference",
+        "_ref": "post-laminate-layers-and-shelf-life",
+        "_key": "why-a-rel1"
+      },
+      {
+        "_type": "reference",
+        "_ref": "post-artwork-for-gravure-cylinders",
+        "_key": "why-a-rel2"
+      }
+    ],
+    "seo": {
+      "title": "Why a first order has a minimum and a repeat order costs less | Spectra Pack",
+      "description": "Gravure printing starts with engraved cylinders, one for every colour. They are the reason a first order has a floor, and the reason the second one is cheaper."
+    }
+  },
+  {
+    "_id": "post-artwork-for-gravure-cylinders",
+    "_type": "blogPost",
+    "order": 3,
+    "title": "Getting your artwork ready for nine gravure cylinders",
+    "slug": {
+      "_type": "slug",
+      "current": "artwork-for-gravure-cylinders"
+    },
+    "category": "artwork",
+    "tags": [
+      "Artwork",
+      "Pre-press"
+    ],
+    "excerpt": "A design that looks right on screen still has to be separated, sized and checked before it can be engraved. Here is what our pre-press desk needs from you.",
+    "readMinutes": 4,
+    "image": {
+      "_type": "image",
+      "_local": "home/guide-artwork.jpg",
+      "alt": "Colour separations of a pouch design on a desk"
+    },
+    "body": [
+      {
+        "_key": "artworp0b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "artworp0b0s0",
+            "_type": "span",
+            "text": "Between the design your agency signs off and the pouch that comes off the line there is a step most brand owners never see. Pre-press turns a finished design into instructions for a set of cylinders. Getting the file right at this stage saves a round of corrections and, sometimes, the cost of re-engraving.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "artworp1b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "artworp1b0s0",
+            "_type": "span",
+            "text": "Send editable vector artwork",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "artworp2b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "artworp2b0s0",
+            "_type": "span",
+            "text": "Logos, text and line work should be vector, not a flattened image, so that they stay sharp at any size and can be separated cleanly. Convert fonts to outlines or send the font files with the artwork. Photographs should be supplied at full resolution and linked, not pasted in at screen quality.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "artworp3b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "artworp3b0s0",
+            "_type": "span",
+            "text": "Think in inks, not in screen colours",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "artworp4b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "artworp4b0s0",
+            "_type": "span",
+            "text": "Our press prints up to nine colours, and each one is a separate cylinder. Brand colours print best as their own mixed ink, so give a colour reference for each one and do not rely on how it looks on a monitor. On clear or metallised film a layer of white is usually printed behind the design so the colours stay opaque, and that white counts as one of the nine.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "artworp5b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "artworp5b0s0",
+            "_type": "span",
+            "text": "Keep clear of the seals",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "artworp6b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "artworp6b0s0",
+            "_type": "span",
+            "text": "Part of every pouch is taken up by heat seals, and features such as a zipper, a tear notch or a hang hole take up more. Ask us for the keyline for your pouch size before the design starts. It shows where the seals, folds and fitments fall, so that no text or barcode ends up under a seal or across a gusset.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "artworp7b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "artworp7b0s0",
+            "_type": "span",
+            "text": "Small type and barcodes",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "artworp8b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "artworp8b0s0",
+            "_type": "span",
+            "text": "Very small text",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "artworp8b0s1",
+            "_type": "span",
+            "text": " is safest in a single dark colour. Fine type built from several colours, or reversed out of a multi-colour background, depends on perfect register.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "artworp8b1",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "artworp8b1s0",
+            "_type": "span",
+            "text": "Thin lines and hairlines",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "artworp8b1s1",
+            "_type": "span",
+            "text": " can fill in or break up. Give them some weight.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "artworp8b2",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "artworp8b2s0",
+            "_type": "span",
+            "text": "Barcodes",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "artworp8b2s1",
+            "_type": "span",
+            "text": " need a dark bar on a light, solid background with clear space on both sides. Let us check the size and direction before engraving.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "artworx9",
+        "_type": "note",
+        "title": "What pre-press adds.",
+        "body": [
+          {
+            "_key": "artworn9b0",
+            "_type": "block",
+            "style": "normal",
+            "markDefs": [
+              {
+                "_key": "artworn9b0l0",
+                "_type": "link",
+                "href": "/infrastructure/#artwork"
+              }
+            ],
+            "children": [
+              {
+                "_key": "artworn9b0s0",
+                "_type": "span",
+                "text": "Our ",
+                "marks": []
+              },
+              {
+                "_key": "artworn9b0s1",
+                "_type": "span",
+                "text": "artwork desk",
+                "marks": [
+                  "artworn9b0l0"
+                ]
+              },
+              {
+                "_key": "artworn9b0s2",
+                "_type": "span",
+                "text": " separates the colours, sets the repeat length, adds the register marks the press and the pouching machine read, and sends you a proof. Nothing is engraved until you have approved it.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "_key": "artworp10b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "artworp10b0s0",
+            "_type": "span",
+            "text": "A short checklist",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "artworp11b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "artworp11b0s0",
+            "_type": "span",
+            "text": "Editable vector file, fonts outlined",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "artworp11b1",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "artworp11b1s0",
+            "_type": "span",
+            "text": "A colour reference for every brand colour",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "artworp11b2",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "artworp11b2s0",
+            "_type": "span",
+            "text": "Pouch size, format and fitments confirmed",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "artworp11b3",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "artworp11b3s0",
+            "_type": "span",
+            "text": "Barcode number and any statutory text supplied",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "artworp11b4",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "artworp11b4s0",
+            "_type": "span",
+            "text": "One person named to approve the proof",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      }
+    ],
+    "related": [
+      {
+        "_type": "reference",
+        "_ref": "post-laminate-layers-and-shelf-life",
+        "_key": "artworrel0"
+      },
+      {
+        "_type": "reference",
+        "_ref": "post-why-a-first-order-has-a-minimum",
+        "_key": "artworrel1"
+      },
+      {
+        "_type": "reference",
+        "_ref": "post-zipper-spout-valve-choosing-fitments",
+        "_key": "artworrel2"
+      }
+    ],
+    "seo": {
+      "title": "Getting your artwork ready for nine gravure cylinders | Spectra Pack",
+      "description": "A design that looks right on screen still has to be separated, sized and checked before it can be engraved. Here is what our pre-press desk needs from you."
+    }
+  },
+  {
+    "_id": "post-zipper-spout-valve-choosing-fitments",
+    "_type": "blogPost",
+    "order": 4,
+    "title": "Zipper, spout or valve: choosing the extras on a pouch",
+    "slug": {
+      "_type": "slug",
+      "current": "zipper-spout-valve-choosing-fitments"
+    },
+    "category": "formats",
+    "tags": [
+      "Formats",
+      "Fitments"
+    ],
+    "excerpt": "The features added on the pouching line change how a pack is opened, poured, hung and closed again. A short guide to what each one is for.",
+    "readMinutes": 3,
+    "image": {
+      "_type": "image",
+      "_local": "blog/fitments.jpg",
+      "alt": "Pouches with a zipper, a spout, a valve and a hang hole"
+    },
+    "body": [
+      {
+        "_key": "zipperp0b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "zipperp0b0s0",
+            "_type": "span",
+            "text": "Two pouches made from the same laminate can behave very differently in a customer's hands. The difference is in the features added at the pouching stage. Each one solves a particular problem, and each adds a little cost, so it is worth choosing them on purpose.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "zipperp1b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "zipperp1b0s0",
+            "_type": "span",
+            "text": "For packs that are opened more than once",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "zipperp2b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "zipperp2b0s0",
+            "_type": "span",
+            "text": "Zipper.",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "zipperp2b0s1",
+            "_type": "span",
+            "text": " A press-to-close strip across the top lets the pouch be resealed. It suits anything used a little at a time: dry fruit, snacks, pulses, cereals.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "zipperp2b1",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "zipperp2b1s0",
+            "_type": "span",
+            "text": "Spout and cap.",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "zipperp2b1s1",
+            "_type": "span",
+            "text": " A welded spout turns a pouch into a light, unbreakable alternative to a bottle for liquids and pastes. It pours cleanly and closes again.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "zipperp3b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "zipperp3b0s0",
+            "_type": "span",
+            "text": "For packs that are opened once",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "zipperp4b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "zipperp4b0s0",
+            "_type": "span",
+            "text": "Tear notch.",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "zipperp4b0s1",
+            "_type": "span",
+            "text": " A small cut in the side seal gives the customer a place to start tearing, so no scissors are needed.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "zipperp4b1",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "zipperp4b1s0",
+            "_type": "span",
+            "text": "Perforation.",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "zipperp4b1s1",
+            "_type": "span",
+            "text": " A tear line between pouches in a string lets a shopkeeper hang a strip and sell it one pouch at a time. It is the standard pack for agarbatti.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "zipperp5b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "zipperp5b0s0",
+            "_type": "span",
+            "text": "For the shelf and the peg",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "zipperp6b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "zipperp6b0s0",
+            "_type": "span",
+            "text": "Bottom gusset.",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "zipperp6b0s1",
+            "_type": "span",
+            "text": " A fold in the base lets a pouch stand upright and face the shopper.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "zipperp6b1",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "zipperp6b1s0",
+            "_type": "span",
+            "text": "Euro punch or round punch.",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "zipperp6b1s1",
+            "_type": "span",
+            "text": " A hole in the header lets the pack hang on a peg hook, which is how most stationery and electrical accessories are sold.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "zipperp6b2",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "zipperp6b2s0",
+            "_type": "span",
+            "text": "D-cut or loop handle.",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "zipperp6b2s1",
+            "_type": "span",
+            "text": " A punched or attached handle for heavier packs and carry bags.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "zipperp6b3",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "zipperp6b3s0",
+            "_type": "span",
+            "text": "Window.",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "zipperp6b3s1",
+            "_type": "span",
+            "text": " A clear, unprinted panel that lets the product sell itself.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "zipperp7b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "zipperp7b0s0",
+            "_type": "span",
+            "text": "For the product itself",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "zipperp8b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "zipperp8b0s0",
+            "_type": "span",
+            "text": "Degassing valve.",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "zipperp8b0s1",
+            "_type": "span",
+            "text": " Freshly roasted coffee gives off gas. A one-way valve lets it out without letting air in, so the pouch does not swell and the coffee stays fresh.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "zipperx9",
+        "_type": "note",
+        "title": "Decide early.",
+        "body": [
+          {
+            "_key": "zippern9b0",
+            "_type": "block",
+            "style": "normal",
+            "markDefs": [
+              {
+                "_key": "zippern9b0l0",
+                "_type": "link",
+                "href": "/products/"
+              }
+            ],
+            "children": [
+              {
+                "_key": "zippern9b0s0",
+                "_type": "span",
+                "text": "A zipper, a notch or a hang hole takes up space on the pouch, and the artwork has to leave room for it. Tell us which features you want before the design is finished. The full list of what we fit is on the ",
+                "marks": []
+              },
+              {
+                "_key": "zippern9b0s1",
+                "_type": "span",
+                "text": "products page",
+                "marks": [
+                  "zippern9b0l0"
+                ]
+              },
+              {
+                "_key": "zippern9b0s2",
+                "_type": "span",
+                "text": ".",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "related": [
+      {
+        "_type": "reference",
+        "_ref": "post-laminate-layers-and-shelf-life",
+        "_key": "zipperrel0"
+      },
+      {
+        "_type": "reference",
+        "_ref": "post-why-a-first-order-has-a-minimum",
+        "_key": "zipperrel1"
+      },
+      {
+        "_type": "reference",
+        "_ref": "post-artwork-for-gravure-cylinders",
+        "_key": "zipperrel2"
+      }
+    ],
+    "seo": {
+      "title": "Zipper, spout or valve: choosing the extras on a pouch | Spectra Pack",
+      "description": "The features added on the pouching line change how a pack is opened, poured, hung and closed again. A short guide to what each one is for."
+    }
+  },
+  {
+    "_id": "post-anti-static-pouches-for-electronics",
+    "_type": "blogPost",
+    "order": 5,
+    "title": "What an anti-static pouch does for a circuit board",
+    "slug": {
+      "_type": "slug",
+      "current": "anti-static-pouches-for-electronics"
+    },
+    "category": "materials",
+    "tags": [
+      "Materials",
+      "Electronics"
+    ],
+    "excerpt": "Static that you cannot feel is enough to damage an electronic component. Anti-static film is made to carry that charge away before it builds up.",
+    "readMinutes": 3,
+    "image": {
+      "_type": "image",
+      "_local": "blog/anti-static.jpg",
+      "alt": "A circuit board being slid into an anti-static pouch"
+    },
+    "body": [
+      {
+        "_key": "anti-sp0b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "anti-sp0b0s0",
+            "_type": "span",
+            "text": "Most packaging protects against things you can see: moisture, dust, knocks. Electronics need protection from something invisible. A static discharge far too small for a person to notice can damage a component, and the damage may not show until the product is in use.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "anti-sp1b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "anti-sp1b0s0",
+            "_type": "span",
+            "text": "Where the charge comes from",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "anti-sp2b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "anti-sp2b0s0",
+            "_type": "span",
+            "text": "Static builds up whenever two materials rub together and separate. Ordinary plastic film is very good at this: a part sliding into a plain polyethylene bag, or two bags rubbing in a carton, generates charge. Because ordinary plastic does not conduct, the charge stays where it is until it finds something to jump to. If that something is a circuit board, the discharge passes through the components.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "anti-sp3b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "anti-sp3b0s0",
+            "_type": "span",
+            "text": "What anti-static film does differently",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "anti-sp4b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "anti-sp4b0s0",
+            "_type": "span",
+            "text": "Anti-static film is made so that charge can spread across its surface and drain away slowly, and so that the film itself generates very little charge when it is rubbed. Nothing builds up, so there is nothing to discharge.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "anti-sp5b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "anti-sp5b0s0",
+            "_type": "span",
+            "text": "When you need it",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "anti-sp6b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "anti-sp6b0s0",
+            "_type": "span",
+            "text": "Bare printed circuit boards and assembled boards",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "anti-sp6b1",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "anti-sp6b1s0",
+            "_type": "span",
+            "text": "Loose components, modules and cartridges",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "anti-sp6b2",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "anti-sp6b2s0",
+            "_type": "span",
+            "text": "Storage devices and anything with exposed contacts",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "anti-sp7b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "anti-sp7b0s0",
+            "_type": "span",
+            "text": "Finished products in their own casing, such as switches, plugs and sockets, are usually packed in ordinary printed pouches. It is the exposed electronics that need the special film.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "anti-sx8",
+        "_type": "note",
+        "title": "Static is not the only risk.",
+        "body": [
+          {
+            "_key": "anti-sn8b0",
+            "_type": "block",
+            "style": "normal",
+            "markDefs": [
+              {
+                "_key": "anti-sn8b0l0",
+                "_type": "link",
+                "href": "/products/?q=anti-static"
+              }
+            ],
+            "children": [
+              {
+                "_key": "anti-sn8b0s0",
+                "_type": "span",
+                "text": "Some components are also sensitive to moisture. In that case anti-static film can be combined with a high barrier laminate. Both are described under ",
+                "marks": []
+              },
+              {
+                "_key": "anti-sn8b0s1",
+                "_type": "span",
+                "text": "anti-static and high barrier pouches",
+                "marks": [
+                  "anti-sn8b0l0"
+                ]
+              },
+              {
+                "_key": "anti-sn8b0s2",
+                "_type": "span",
+                "text": ".",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "_key": "anti-sp9b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "anti-sp9b0s0",
+            "_type": "span",
+            "text": "What to tell us",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "anti-sp10b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "anti-sp10b0s0",
+            "_type": "span",
+            "text": "Send the size of the part, whether it is a bare board or a cased product, how it is packed at your end, and whether it needs to be sealed or simply bagged. We make these pouches in three-side seal, centre seal, stand-up and zipper formats, plain or printed.",
+            "marks": []
+          }
+        ]
+      }
+    ],
+    "related": [
+      {
+        "_type": "reference",
+        "_ref": "post-laminate-layers-and-shelf-life",
+        "_key": "anti-srel0"
+      },
+      {
+        "_type": "reference",
+        "_ref": "post-why-a-first-order-has-a-minimum",
+        "_key": "anti-srel1"
+      },
+      {
+        "_type": "reference",
+        "_ref": "post-artwork-for-gravure-cylinders",
+        "_key": "anti-srel2"
+      }
+    ],
+    "seo": {
+      "title": "What an anti-static pouch does for a circuit board | Spectra Pack",
+      "description": "Static that you cannot feel is enough to damage an electronic component. Anti-static film is made to carry that charge away before it builds up."
+    }
+  },
+  {
+    "_id": "post-roll-stock-or-finished-pouches",
+    "_type": "blogPost",
+    "order": 6,
+    "title": "Roll stock or finished pouches: which should you order?",
+    "slug": {
+      "_type": "slug",
+      "current": "roll-stock-or-finished-pouches"
+    },
+    "category": "ordering",
+    "tags": [
+      "Ordering",
+      "Formats"
+    ],
+    "excerpt": "The same printed laminate can leave our plant on a reel or as ready-made pouches. The right choice depends on how you fill your product.",
+    "readMinutes": 3,
+    "image": {
+      "_type": "image",
+      "_local": "blog/roll-stock.jpg",
+      "alt": "A reel of printed film beside a stack of finished pouches"
+    },
+    "body": [
+      {
+        "_key": "roll-sp0b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "roll-sp0b0s0",
+            "_type": "span",
+            "text": "Every job in our plant is printed and laminated in the same way. The difference comes at the end: some customers take the film as a reel, and some take it as finished pouches. Which one you need depends on what happens in your own factory.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "roll-sp1b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "roll-sp1b0s0",
+            "_type": "span",
+            "text": "Roll stock: for a form-fill-seal machine",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "roll-sp2b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [
+          {
+            "_key": "roll-sp2b0l0",
+            "_type": "link",
+            "href": "/infrastructure/#slit"
+          }
+        ],
+        "children": [
+          {
+            "_key": "roll-sp2b0s0",
+            "_type": "span",
+            "text": "If you own a machine that forms the pack, fills it and seals it in one pass, you buy film on the reel. Your order is finished at our ",
+            "marks": []
+          },
+          {
+            "_key": "roll-sp2b0s1",
+            "_type": "span",
+            "text": "slitting stage",
+            "marks": [
+              "roll-sp2b0l0"
+            ]
+          },
+          {
+            "_key": "roll-sp2b0s2",
+            "_type": "span",
+            "text": ", where the wide printed roll is cut to the width your machine takes.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "roll-sp3b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "roll-sp3b0s0",
+            "_type": "span",
+            "text": "Roll stock usually costs less per pack, because the pouch-making step happens on your line and not on ours. In return, we need a few details about your machine before we start.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "roll-sp4b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "roll-sp4b0s0",
+            "_type": "span",
+            "text": "The film width and the repeat length of one pack",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "roll-sp4b1",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "roll-sp4b1s0",
+            "_type": "span",
+            "text": "The core size and the largest reel your machine can carry",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "roll-sp4b2",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "roll-sp4b2s0",
+            "_type": "span",
+            "text": "The winding direction, which decides which way the print faces as the film unwinds",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "roll-sp4b3",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "roll-sp4b3s0",
+            "_type": "span",
+            "text": "The position of the register mark your machine reads",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "roll-sp5b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "roll-sp5b0s0",
+            "_type": "span",
+            "text": "Finished pouches: for hand or semi-automatic filling",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "roll-sp6b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "roll-sp6b0s0",
+            "_type": "span",
+            "text": "If your product is filled by hand, by a weigher or on a simple band sealer, you buy ready-made pouches. They arrive formed and sealed on three sides, and you fill and close the fourth.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "roll-sp7b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "roll-sp7b0s0",
+            "_type": "span",
+            "text": "Pouches are also the only route to features that a basic filling machine cannot add: a zipper, a spout, a stand-up base, a custom shape.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "roll-sp8b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "roll-sp8b0s0",
+            "_type": "span",
+            "text": "A quick comparison",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "roll-sx9",
+        "_type": "table",
+        "rows": [
+          {
+            "_key": "roll-sr90",
+            "_type": "row",
+            "cells": [
+              "",
+              "Roll stock",
+              "Finished pouches"
+            ]
+          },
+          {
+            "_key": "roll-sr91",
+            "_type": "row",
+            "cells": [
+              "You need",
+              "A form-fill-seal machine",
+              "A sealer, or nothing at all"
+            ]
+          },
+          {
+            "_key": "roll-sr92",
+            "_type": "row",
+            "cells": [
+              "Best for",
+              "High, steady volumes",
+              "Smaller runs and many variants"
+            ]
+          },
+          {
+            "_key": "roll-sr93",
+            "_type": "row",
+            "cells": [
+              "Fitments",
+              "Limited by your machine",
+              "Zipper, spout, valve, shapes"
+            ]
+          },
+          {
+            "_key": "roll-sr94",
+            "_type": "row",
+            "cells": [
+              "We need from you",
+              "Machine width, core, winding",
+              "Pouch size and features"
+            ]
+          }
+        ],
+        "headerRow": true
+      },
+      {
+        "_key": "roll-sx10",
+        "_type": "note",
+        "title": "Growing out of pouches.",
+        "body": [
+          {
+            "_key": "roll-sn10b0",
+            "_type": "block",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "roll-sn10b0s0",
+                "_type": "span",
+                "text": "Many brands start with finished pouches and move to roll stock when the volume justifies a machine. The cylinders made for the pouch can often be reused if the pack size stays the same, so tell us early if that is the plan.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "related": [
+      {
+        "_type": "reference",
+        "_ref": "post-why-a-first-order-has-a-minimum",
+        "_key": "roll-srel0"
+      },
+      {
+        "_type": "reference",
+        "_ref": "post-laminate-layers-and-shelf-life",
+        "_key": "roll-srel1"
+      },
+      {
+        "_type": "reference",
+        "_ref": "post-artwork-for-gravure-cylinders",
+        "_key": "roll-srel2"
+      }
+    ],
+    "seo": {
+      "title": "Roll stock or finished pouches: which should you order? | Spectra Pack",
+      "description": "The same printed laminate can leave our plant on a reel or as ready-made pouches. The right choice depends on how you fill your product."
+    }
+  },
+  {
+    "_id": "siteSettings",
+    "_type": "siteSettings",
+    "companyName": "Spectra Pack",
+    "locationLabel": "Umbergaon, Gujarat",
+    "topbarBold": "Small runs",
+    "topbarText": "First orders start at 5,000 pouches on 9-colour gravure",
+    "topbarLinkLabel": "Ask for a quote",
+    "phones": [
+      {
+        "_type": "phone",
+        "_key": "k1q",
+        "label": "+91 91676 61011",
+        "link": "+919167661011"
+      },
+      {
+        "_type": "phone",
+        "_key": "k1r",
+        "label": "+91 98335 91012",
+        "link": "+919833591012"
+      }
+    ],
+    "email": "info@spectrapack.co.in",
+    "whatsappNumber": "919167661011",
+    "instagramUrl": "https://www.instagram.com/spectrapack.in",
+    "addressLines": [
+      "A-1/503, GIDC Road, Phase 3,",
+      "GIDC Umbergaon, Umargam,",
+      "Gujarat 396171, India"
+    ],
+    "directionsUrl": "https://www.google.com/maps/search/?api=1&query=Spectra+Pack+GIDC+Umbergaon+Gujarat+396171",
+    "mapQuery": "Spectra Pack, GIDC Umbergaon, Gujarat 396171",
+    "footerCardTitle": "Start a project",
+    "footerCardText": "Send the pouch size, quantity and artwork. We reply with a laminate and a price.",
+    "footerCardImage": {
+      "_type": "image",
+      "_local": "shared/footer-card.jpg",
+      "alt": "Sample pouches and a specification sheet"
+    },
+    "defaultOgImage": {
+      "_type": "image",
+      "_local": "shared/og-image.jpg",
+      "alt": "Spectra Pack: flexible packaging printed, laminated and pouched in Umbergaon, Gujarat"
+    },
+    "orgDescription": "Flexible packaging manufacturer: 9-colour rotogravure printing, lamination, slitting and pouching under one roof in Umbergaon, Gujarat.",
+    "foundingYear": "1997",
+    "streetAddress": "A-1/503, GIDC Road, Phase 3, GIDC Umbergaon",
+    "addressLocality": "Umargam",
+    "addressRegion": "Gujarat",
+    "postalCode": "396171",
+    "languages": [
+      "en",
+      "hi",
+      "gu"
+    ]
+  },
+  {
+    "_id": "homePage",
+    "_type": "homePage",
+    "seo": {
+      "title": "Spectra Pack | Flexible packaging manufacturer, Umbergaon, Gujarat",
+      "description": "Spectra Pack prints, laminates, slits and pouches flexible packaging under one roof in Umbergaon, Gujarat. 9-colour rotogravure, with first orders from 5,000 pouches."
+    },
+    "heroTitle": "Packaging that makes brands stand out",
+    "heroTitleHidden": "Flexible packaging printed, laminated and pouched by Spectra Pack in Umbergaon, Gujarat.",
+    "heroMarkTop": "Up to",
+    "heroMarkNumber": "9",
+    "heroMarkBottom": "Colour printing",
+    "heroText": "Custom printed rolls and pouches, made for the products people reach for every day.",
+    "heroThumb": {
+      "_type": "image",
+      "_local": "home/hero-03.jpg",
+      "alt": "A printed film sample being compared with a colour swatch"
+    },
+    "heroPhotos": [
+      {
+        "_key": "k1s",
+        "_type": "image",
+        "_local": "home/hero-01.jpg",
+        "alt": "Printed film running through a rotogravure press"
+      },
+      {
+        "_key": "k1t",
+        "_type": "image",
+        "_local": "home/hero-04.jpg",
+        "alt": "A wide printed roll being slit into narrow reels"
+      },
+      {
+        "_key": "k1u",
+        "_type": "image",
+        "_local": "home/hero-05.jpg",
+        "alt": "A pouch-making line delivering finished printed pouches"
+      }
+    ],
+    "heroPrimary": {
+      "label": "Explore products",
+      "href": "/products/"
+    },
+    "heroSecondary": {
+      "label": "Get a quote",
+      "href": "/contact/#enquiry"
+    },
+    "heroPanelImage": {
+      "_type": "image",
+      "_local": "home/hero-02.jpg",
+      "alt": "A row of finished stand-up, flat and spout pouches"
+    },
+    "heroPanelTitle": "9-colour gravure",
+    "heroPanelText": "1,200 mm · 300 m/min",
+    "heroPanelHref": "/infrastructure/#print",
+    "storyTitle": "What we *do*",
+    "storyQuote": "We print your design on film, bond the layers, cut the roll to width and form it into pouches that are ready to fill.",
+    "storyBackground": {
+      "_type": "image",
+      "_local": "home/story-bg.jpg",
+      "alt": ""
+    },
+    "storyCards": [
+      {
+        "_type": "card",
+        "_key": "k1v",
+        "title": "Our story",
+        "image": {
+          "_type": "image",
+          "_local": "home/story-01.jpg",
+          "alt": "Two press operators at a control panel"
+        },
+        "href": "/about/"
+      },
+      {
+        "_type": "card",
+        "_key": "k1w",
+        "title": "How a pouch is made",
+        "image": {
+          "_type": "image",
+          "_local": "home/story-02.jpg",
+          "alt": "A film reel, a laminated sheet and a finished pouch side by side"
+        },
+        "href": "/infrastructure/#process"
+      },
+      {
+        "_type": "card",
+        "_key": "k1x",
+        "title": "Small-run orders",
+        "image": {
+          "_type": "image",
+          "_local": "home/story-03.jpg",
+          "alt": "A small stack of pouches beside a full carton"
+        },
+        "href": "/contact/#enquiry"
+      }
+    ],
+    "clientsCount": "100+",
+    "clientsCountLabel": "happy clients",
+    "clientsTitle": "Trusted by the brands *we pack for*",
+    "clientsLead": "Serving more than 100 happy clients in stationery, electricals, food, pharma and more.",
+    "marketsTitle": "Packaging by *industry*",
+    "marketsKicker": "Built around what you pack",
+    "marketsLead": "Every product asks something different of its pack: shelf life for a spice, static protection for a circuit board, a hang hole for a box of crayons. Pick your sector to see what we usually run for it.",
+    "finderTitle": "Tell us what you pack and we will find the format.",
+    "finderPlaceholder": "Search a pouch, film or feature",
+    "finderQuestion": "Or start from the format you already have in mind.",
+    "finderTiles": [
+      {
+        "_type": "productTile",
+        "_key": "k26",
+        "label": "Three-side seal",
+        "product": {
+          "_type": "reference",
+          "_ref": "product-three-side-seal",
+          "_key": "k1y"
+        },
+        "query": "three-side"
+      },
+      {
+        "_type": "productTile",
+        "_key": "k27",
+        "label": "Centre seal",
+        "product": {
+          "_type": "reference",
+          "_ref": "product-centre-seal",
+          "_key": "k1z"
+        },
+        "query": "centre seal"
+      },
+      {
+        "_type": "productTile",
+        "_key": "k28",
+        "label": "Stand-up & zipper",
+        "product": {
+          "_type": "reference",
+          "_ref": "product-standup-zipper",
+          "_key": "k20"
+        },
+        "query": "stand-up"
+      },
+      {
+        "_type": "productTile",
+        "_key": "k29",
+        "label": "Spout & valve",
+        "product": {
+          "_type": "reference",
+          "_ref": "product-spout-valve",
+          "_key": "k21"
+        },
+        "query": "spout"
+      },
+      {
+        "_type": "productTile",
+        "_key": "k2a",
+        "label": "Side seal",
+        "product": {
+          "_type": "reference",
+          "_ref": "product-side-seal",
+          "_key": "k22"
+        },
+        "query": "side sealing"
+      },
+      {
+        "_type": "productTile",
+        "_key": "k2b",
+        "label": "Bottom seal",
+        "product": {
+          "_type": "reference",
+          "_ref": "product-bottom-seal",
+          "_key": "k23"
+        },
+        "query": "bottom seal"
+      },
+      {
+        "_type": "productTile",
+        "_key": "k2c",
+        "label": "Vacuum",
+        "product": {
+          "_type": "reference",
+          "_ref": "product-vacuum",
+          "_key": "k24"
+        },
+        "query": "vacuum"
+      },
+      {
+        "_type": "productTile",
+        "_key": "k2d",
+        "label": "Shaped",
+        "product": {
+          "_type": "reference",
+          "_ref": "product-shaped",
+          "_key": "k25"
+        },
+        "query": "shaped"
+      }
+    ],
+    "finderChips": [
+      {
+        "_type": "productTile",
+        "_key": "k2k",
+        "label": "Laminated rolls",
+        "product": {
+          "_type": "reference",
+          "_ref": "product-laminated-rolls",
+          "_key": "k2e"
+        },
+        "query": "laminated rolls"
+      },
+      {
+        "_type": "productTile",
+        "_key": "k2l",
+        "label": "Nylon / BOPA laminates",
+        "product": {
+          "_type": "reference",
+          "_ref": "product-nylon-bopa",
+          "_key": "k2f"
+        },
+        "query": "nylon"
+      },
+      {
+        "_type": "productTile",
+        "_key": "k2m",
+        "label": "Aluminium foil pouches",
+        "product": {
+          "_type": "reference",
+          "_ref": "product-aluminium-foil",
+          "_key": "k2g"
+        },
+        "query": "aluminium"
+      },
+      {
+        "_type": "productTile",
+        "_key": "k2n",
+        "label": "Anti-static & high barrier",
+        "product": {
+          "_type": "reference",
+          "_ref": "product-antistatic-barrier",
+          "_key": "k2h"
+        },
+        "query": "anti-static"
+      },
+      {
+        "_type": "productTile",
+        "_key": "k2o",
+        "label": "Perforation strings",
+        "product": {
+          "_type": "reference",
+          "_ref": "product-perforation",
+          "_key": "k2i"
+        },
+        "query": "perforation"
+      },
+      {
+        "_type": "productTile",
+        "_key": "k2p",
+        "label": "Courier & carry bags",
+        "product": {
+          "_type": "reference",
+          "_ref": "product-courier-carry",
+          "_key": "k2j"
+        },
+        "query": "courier"
+      }
+    ],
+    "finderButton": {
+      "label": "View all products",
+      "href": "/products/"
+    },
+    "panelTitle": "Four steps, *one roof.* Every roll is *printed, bonded, cut and formed* here.",
+    "panelStats": [
+      {
+        "_type": "stat",
+        "_key": "k2q",
+        "icon": "palette",
+        "value": "9",
+        "unit": "",
+        "label": "Colours per pass"
+      },
+      {
+        "_type": "stat",
+        "_key": "k2r",
+        "icon": "ruler",
+        "value": "1200",
+        "unit": "mm",
+        "label": "Print width"
+      },
+      {
+        "_type": "stat",
+        "_key": "k2s",
+        "icon": "gauge",
+        "value": "350",
+        "unit": "m/min",
+        "label": "Lamination speed"
+      },
+      {
+        "_type": "stat",
+        "_key": "k2t",
+        "icon": "pouch",
+        "value": "300",
+        "unit": "/min",
+        "label": "Pouching strokes"
+      },
+      {
+        "_type": "stat",
+        "_key": "k2u",
+        "icon": "calendar",
+        "value": "1997",
+        "unit": "",
+        "label": "Making film since"
+      }
+    ],
+    "panelText": "Printing, lamination, slitting and pouching sit in the same 27,000 sq ft plant at Umbergaon, so one team answers for the shade, the seal and the delivery date.",
+    "panelButton": {
+      "label": "See the plant",
+      "href": "/infrastructure/"
+    },
+    "panelImage": {
+      "_type": "image",
+      "_local": "home/process-panel.jpg",
+      "alt": "Engraved gravure cylinders lined up on a rack"
+    },
+    "guidesTitle": "From the *shop floor*",
+    "guidesButton": {
+      "label": "Read all articles",
+      "href": "/blog/"
+    },
+    "fitmentsTitle": "Fitted on the *pouching line*",
+    "fitments": [
+      "Zipper",
+      "Spout & cap",
+      "Degassing valve",
+      "Tear notch",
+      "Euro punch",
+      "D-cut handle",
+      "Round punch",
+      "Bottom gusset",
+      "Product window",
+      "Perforation string",
+      "Matte or gloss finish"
+    ],
+    "exportsTitle": "Where our packaging *ships*",
+    "exportMarkets": [
+      {
+        "_type": "market",
+        "_key": "k2v",
+        "code": "IN",
+        "name": "India"
+      },
+      {
+        "_type": "market",
+        "_key": "k2w",
+        "code": "AE",
+        "name": "UAE"
+      },
+      {
+        "_type": "market",
+        "_key": "k2x",
+        "code": "OM",
+        "name": "Oman"
+      },
+      {
+        "_type": "market",
+        "_key": "k2y",
+        "code": "ET",
+        "name": "Ethiopia"
+      },
+      {
+        "_type": "market",
+        "_key": "k2z",
+        "code": "CA",
+        "name": "Canada"
+      },
+      {
+        "_type": "market",
+        "_key": "k30",
+        "code": "US",
+        "name": "USA"
+      }
+    ]
+  },
+  {
+    "_id": "aboutPage",
+    "_type": "aboutPage",
+    "seo": {
+      "title": "About us | Spectra Pack",
+      "description": "A flexible packaging converter since 1997. From a 2,000 sq ft unit in Vasai to a 27,000 sq ft plant at GIDC Umbergaon, Gujarat."
+    },
+    "visionEyebrow": "Vision",
+    "visionStatement": "To introduce new packing concepts for every segment of goods, through *continuous process improvement* and rising customer satisfaction.",
+    "visionImage": {
+      "_type": "image",
+      "_local": "about/vision-bg.jpg",
+      "alt": ""
+    },
+    "introTitle": "A flexible packaging converter, *since 1997*",
+    "introParagraphs": [
+      {
+        "_type": "para",
+        "_key": "k31",
+        "text": "Spectra Pack began in 1997 as Super Flexible Packaging, in a 2,000 sq ft unit in Vasai with ten people and three machines assembled by hand: one to print, one to laminate and one to slit.",
+        "style": "normal"
+      },
+      {
+        "_type": "para",
+        "_key": "k32",
+        "text": "Spectra means a set of seven colours.",
+        "style": "bold"
+      },
+      {
+        "_type": "para",
+        "_key": "k33",
+        "text": "Seven inks, mixed into every shade a brand asks for, and matched again on every repeat order.",
+        "style": "accent"
+      },
+      {
+        "_type": "para",
+        "_key": "k34",
+        "text": "Today the company runs a 27,000 sq ft plant at Umbergaon in Gujarat, and makes printed laminates, pouches and bags for food, pharmaceutical, stationery, electrical and household brands in India and abroad.",
+        "style": "normal"
+      }
+    ],
+    "introImage": {
+      "_type": "image",
+      "_local": "about/intro.jpg",
+      "alt": "Seven ink colours in open tins beside printed film"
+    },
+    "overviewTitle": "Spectra Pack *at a glance*",
+    "overviewLead": "One plant, four processes, and a second generation of the founding family on the floor.",
+    "overviewImage": {
+      "_type": "image",
+      "_local": "about/plant.jpg",
+      "alt": "The Spectra Pack plant at GIDC Umbergaon"
+    },
+    "numbers": [
+      {
+        "_type": "figure",
+        "_key": "k35",
+        "value": "1997",
+        "unit": "",
+        "label": "Founded in Vasai"
+      },
+      {
+        "_type": "figure",
+        "_key": "k36",
+        "value": "27,000",
+        "unit": "sq ft",
+        "label": "Plant at Umbergaon"
+      },
+      {
+        "_type": "figure",
+        "_key": "k37",
+        "value": "100",
+        "unit": "+",
+        "label": "Happy clients"
+      },
+      {
+        "_type": "figure",
+        "_key": "k38",
+        "value": "6",
+        "unit": "",
+        "label": "Countries shipped to"
+      }
+    ],
+    "businessTitle": "What we *run*",
+    "businessText": "Spectra Pack is a converter. We buy film in large reels and take it through four stages in our own plant, so that the print, the barrier, the width and the seal are all decided by one team.",
+    "stages": [
+      {
+        "_type": "stage",
+        "_key": "k39",
+        "step": "01",
+        "title": "Printing",
+        "meta": "9-colour rotogravure, 1,200 mm wide",
+        "image": {
+          "_type": "image",
+          "_local": "shared/stage-print.jpg",
+          "alt": "Film passing over an inked gravure cylinder"
+        },
+        "href": "/infrastructure/#print"
+      },
+      {
+        "_type": "stage",
+        "_key": "k3a",
+        "step": "02",
+        "title": "Lamination",
+        "meta": "Solvent and solventless, 1,100 mm wide",
+        "image": {
+          "_type": "image",
+          "_local": "shared/stage-laminate.jpg",
+          "alt": "Two films meeting at a lamination nip roller"
+        },
+        "href": "/infrastructure/#laminate"
+      },
+      {
+        "_type": "stage",
+        "_key": "k3b",
+        "step": "03",
+        "title": "Slitting",
+        "meta": "Drum and cantilever, 400 m/min",
+        "image": {
+          "_type": "image",
+          "_local": "shared/stage-slit.jpg",
+          "alt": "A wide roll being slit into narrower reels"
+        },
+        "href": "/infrastructure/#slit"
+      },
+      {
+        "_type": "stage",
+        "_key": "k3c",
+        "step": "04",
+        "title": "Pouching",
+        "meta": "Up to 300 strokes a minute",
+        "image": {
+          "_type": "image",
+          "_local": "shared/stage-pouch.jpg",
+          "alt": "Finished pouches coming off a pouching machine"
+        },
+        "href": "/infrastructure/#pouch"
+      }
+    ],
+    "sectorsTitle": "Sectors we *make for*",
+    "sectorsLead": "Food is only part of it. The same plant packs stationery, electricals, incense, adhesives and healthcare products, and each one asks for a different film.",
+    "milestonesLead": "From three hand-assembled machines in Vasai to a full converting plant in Umbergaon.",
+    "milestones": [
+      {
+        "_type": "milestone",
+        "_key": "k3d",
+        "year": "1997",
+        "title": "A 2,000 sq ft unit in Vasai",
+        "text": "Amit J. Desai starts the company as Super Flexible Packaging with ten people. The first printing, lamination and slitting machines are assembled on site by the founder and his operators.",
+        "image": {
+          "_type": "image",
+          "_local": "about/timeline-1997.jpg",
+          "alt": "A small reel of printed film on a workbench"
+        }
+      },
+      {
+        "_type": "milestone",
+        "_key": "k3e",
+        "year": "2017",
+        "title": "The Umbergaon plant and the second generation",
+        "text": "After growing to 8,000 sq ft in Vasai alongside co-founder Samir J. Desai, the company moves into an industrial shed at GIDC Umbergaon. Siddharth Desai and Karna Desai join as partners.",
+        "image": {
+          "_type": "image",
+          "_local": "about/timeline-2017.jpg",
+          "alt": "A long press installed in a new factory hall"
+        }
+      },
+      {
+        "_type": "milestone",
+        "_key": "k3f",
+        "year": "Today",
+        "title": "27,000 sq ft, shipping from Gujarat",
+        "text": "Printing, lamination, slitting and pouching run under one roof, with consignments leaving for customers across India and for the UAE, Oman, Ethiopia, Canada and the USA.",
+        "image": {
+          "_type": "image",
+          "_local": "about/timeline-today.jpg",
+          "alt": "Cartons of pouches on pallets ready for dispatch"
+        }
+      }
+    ],
+    "teamTitle": "The people *behind the press*",
+    "team": [
+      {
+        "_type": "person",
+        "_key": "k3g",
+        "name": "Amit Desai",
+        "role": "Founder",
+        "photo": {
+          "_type": "image",
+          "_local": "about/team-amit-desai.jpg",
+          "alt": "Amit Desai"
+        }
+      },
+      {
+        "_type": "person",
+        "_key": "k3h",
+        "name": "Samir Desai",
+        "role": "Co-founder & Partner",
+        "photo": {
+          "_type": "image",
+          "_local": "about/team-samir-desai.jpg",
+          "alt": "Samir Desai"
+        }
+      },
+      {
+        "_type": "person",
+        "_key": "k3i",
+        "name": "Siddharth Desai",
+        "role": "Partner",
+        "photo": {
+          "_type": "image",
+          "_local": "about/team-siddharth-desai.jpg",
+          "alt": "Siddharth Desai"
+        }
+      },
+      {
+        "_type": "person",
+        "_key": "k3j",
+        "name": "Karna Desai",
+        "role": "Partner",
+        "photo": {
+          "_type": "image",
+          "_local": "about/team-karna-desai.jpg",
+          "alt": "Karna Desai"
+        }
+      }
+    ],
+    "teamNote": "Operators who have been with the company since the Vasai years work beside a younger team that joined with the Umbergaon plant."
+  },
+  {
+    "_id": "productsPage",
+    "_type": "productsPage",
+    "seo": {
+      "title": "Products | Pouches, laminated rolls and bags | Spectra Pack",
+      "description": "Three-side seal, centre seal, stand-up, zipper, spout, vacuum and anti-static pouches, laminated rolls and courier bags, made to order."
+    },
+    "title": "Pouches, rolls and bags *made to your product*",
+    "text": "Search by format, by feature or by what you pack. Everything here is made to order in your size, your laminate and your print.",
+    "searchPlaceholder": "Search a pouch, film or feature",
+    "image": {
+      "_type": "image",
+      "_local": "products/hero.jpg",
+      "alt": "A group of pouches, rolls and bags"
+    }
+  },
+  {
+    "_id": "industriesPage",
+    "_type": "industriesPage",
+    "seo": {
+      "title": "Industries | Spectra Pack",
+      "description": "Flexible packaging for food and FMCG, beverages, stationery, electrical, pharma, agarbatti, hardware and personal care brands."
+    },
+    "eyebrow": "Industries",
+    "title": "Packaging for *what you make*",
+    "image": {
+      "_type": "image",
+      "_local": "industries/hero.jpg",
+      "alt": "Products from several industries in flexible packs"
+    },
+    "button": {
+      "label": "View products",
+      "href": "/products/"
+    },
+    "detailsTitle": "One plant, *many shelves*",
+    "detailsLead": "Most flexible packaging firms talk only about food. Spectra Pack also packs wall plugs, adhesives, incense and crayons, and each of those asks for a different film.",
+    "detailsCopy": [
+      "A spice needs a laminate that keeps moisture out for months. A printed circuit board needs a film that bleeds away static. A box of pencils needs a clear, stiff bag with a hole that hangs straight on a peg. The sector decides the structure, and the structure decides which machine the job runs on.",
+      "Tell us the product, the fill weight and how it will be sold, and we will propose a laminate, a format and a quantity to start with."
+    ],
+    "sectorsTitle": "Sectors we *make for*",
+    "relatedTitle": "You might *need*",
+    "relatedButton": {
+      "label": "View products",
+      "href": "/products/"
+    },
+    "related": [
+      {
+        "_type": "suggestion",
+        "_key": "k3r",
+        "product": {
+          "_type": "reference",
+          "_ref": "product-standup-zipper",
+          "_key": "k3k"
+        },
+        "query": "stand-up"
+      },
+      {
+        "_type": "suggestion",
+        "_key": "k3s",
+        "product": {
+          "_type": "reference",
+          "_ref": "product-three-side-seal",
+          "_key": "k3l"
+        },
+        "query": "three-side"
+      },
+      {
+        "_type": "suggestion",
+        "_key": "k3t",
+        "product": {
+          "_type": "reference",
+          "_ref": "product-side-seal",
+          "_key": "k3m"
+        },
+        "query": "side sealing"
+      },
+      {
+        "_type": "suggestion",
+        "_key": "k3u",
+        "product": {
+          "_type": "reference",
+          "_ref": "product-spout-valve",
+          "_key": "k3n"
+        },
+        "query": "spout"
+      },
+      {
+        "_type": "suggestion",
+        "_key": "k3v",
+        "product": {
+          "_type": "reference",
+          "_ref": "product-antistatic-barrier",
+          "_key": "k3o"
+        },
+        "query": "anti-static"
+      },
+      {
+        "_type": "suggestion",
+        "_key": "k3w",
+        "product": {
+          "_type": "reference",
+          "_ref": "product-perforation",
+          "_key": "k3p"
+        },
+        "query": "perforation"
+      },
+      {
+        "_type": "suggestion",
+        "_key": "k3x",
+        "product": {
+          "_type": "reference",
+          "_ref": "product-laminated-rolls",
+          "_key": "k3q"
+        },
+        "query": "laminated rolls"
+      }
+    ]
+  },
+  {
+    "_id": "infrastructurePage",
+    "_type": "infrastructurePage",
+    "seo": {
+      "title": "Infrastructure | Printing, lamination, slitting and pouching | Spectra Pack",
+      "description": "Inside the Umbergaon plant: 9-colour rotogravure printing, combi lamination, slitting, three pouching lines and an in-house quality lab."
+    },
+    "eyebrow": "Infrastructure",
+    "title": "A converting plant *in Umbergaon*",
+    "image": {
+      "_type": "image",
+      "_local": "infrastructure/hero.jpg",
+      "alt": "The production floor seen along a printing press"
+    },
+    "button": {
+      "label": "See the process",
+      "href": "#process"
+    },
+    "artworkTitle": "Artwork and *pre-press*",
+    "artworkText": "Bring your finished design. Our in-house artwork desk prepares it for the press, so that what you approved on screen is what comes off the cylinders.",
+    "artworkImage": {
+      "_type": "image",
+      "_local": "infrastructure/artwork-desk.jpg",
+      "alt": "A pre-press operator checking a pouch layout on screen"
+    },
+    "artworkChecklist": [
+      {
+        "_type": "checkItem",
+        "_key": "k3y",
+        "title": "Colour separation",
+        "text": "Your artwork is split into up to nine inks, one cylinder for each."
+      },
+      {
+        "_type": "checkItem",
+        "_key": "k3z",
+        "title": "Variant planning",
+        "text": "Flavours and sizes that share a layout are planned as single-cylinder or single-colour changes."
+      },
+      {
+        "_type": "checkItem",
+        "_key": "k40",
+        "title": "Shade matching",
+        "text": "Inks are mixed to your approved shade and matched again on every repeat order."
+      }
+    ],
+    "processTitle": "Process *& machinery*",
+    "processLead": "Every machine in the 27,000 sq ft plant does something to a long reel of thin film. The film goes in plain and comes out printed, thicker, narrower, or folded into a bag. Here are the four steps, and the machines that run each one.",
+    "steps": [
+      {
+        "_type": "step",
+        "_key": "k4a",
+        "anchor": "print",
+        "number": "01",
+        "tag": "PRINT",
+        "title": "Printing",
+        "text": "Your artwork is engraved into metal cylinders. Each cylinder turns through one ink and presses it onto the film, one colour at a time, up to nine colours. The method is called rotogravure.",
+        "why": "Engraving the cylinders is the costly part of a first order, which is why it carries a minimum quantity. When a variant shares the layout, we change a single cylinder or a single colour instead of the whole set, so a run of 5,000 pouches stays affordable.",
+        "specs": [
+          "9 colours",
+          "1,200 mm wide",
+          "300 m/min",
+          "5 tonnes a day"
+        ],
+        "image": {
+          "_type": "image",
+          "_local": "shared/stage-print.jpg",
+          "alt": "Film passing over an inked gravure cylinder"
+        },
+        "machines": [
+          {
+            "_type": "reference",
+            "_ref": "machine-rotogravure",
+            "_key": "k41"
+          },
+          {
+            "_type": "reference",
+            "_ref": "machine-flexo",
+            "_key": "k42"
+          },
+          {
+            "_type": "reference",
+            "_ref": "machine-inspection",
+            "_key": "k43"
+          }
+        ]
+      },
+      {
+        "_type": "step",
+        "_key": "k4b",
+        "anchor": "laminate",
+        "number": "02",
+        "tag": "BOND",
+        "title": "Lamination",
+        "text": "Two or three different films are bonded into one sheet. A typical build is PET, aluminium foil and polyethylene: the outside carries the print, the middle blocks light and air, and the inside melts to form the seal.",
+        "why": "The choice of layers decides how long your product keeps. Solventless lamination leaves no odour, which is what food and pharmaceutical packs need.",
+        "specs": [
+          "1,100 mm wide",
+          "350 m/min",
+          "Solvent + solventless",
+          "Up to 150 micron PE"
+        ],
+        "image": {
+          "_type": "image",
+          "_local": "shared/stage-laminate.jpg",
+          "alt": "Two films meeting at a lamination nip roller"
+        },
+        "machines": [
+          {
+            "_type": "reference",
+            "_ref": "machine-lamination",
+            "_key": "k44"
+          }
+        ]
+      },
+      {
+        "_type": "step",
+        "_key": "k4c",
+        "anchor": "slit",
+        "number": "03",
+        "tag": "CUT",
+        "title": "Slitting",
+        "text": "The wide printed roll is cut lengthways into narrower reels, each one sized to the machine that will run it next.",
+        "why": "If you form and fill on your own line, this is where your order is finished. You receive reels, not pouches.",
+        "specs": [
+          "1,100 mm wide",
+          "400 m/min",
+          "Drum + cantilever",
+          "Shaftless unwind"
+        ],
+        "image": {
+          "_type": "image",
+          "_local": "shared/stage-slit.jpg",
+          "alt": "A wide roll being slit into narrower reels"
+        },
+        "machines": [
+          {
+            "_type": "reference",
+            "_ref": "machine-slitting",
+            "_key": "k45"
+          }
+        ]
+      },
+      {
+        "_type": "step",
+        "_key": "k4d",
+        "anchor": "pouch",
+        "number": "04",
+        "tag": "FORM",
+        "title": "Pouching",
+        "text": "The film is folded and heat sealed into a finished bag, and the extras are added: a zipper, a spout and cap, a hang hole, a tear notch, or a one-way valve for coffee.",
+        "why": "Three pouching lines cover three-side and centre seal, side seal, and bottom seal formats, so most jobs have a machine suited to them.",
+        "specs": [
+          "200 to 300 strokes/min",
+          "Minimum cut 50 mm",
+          "Zipper, spout, gusset"
+        ],
+        "image": {
+          "_type": "image",
+          "_local": "shared/stage-pouch.jpg",
+          "alt": "Finished pouches coming off a pouching machine"
+        },
+        "machines": [
+          {
+            "_type": "reference",
+            "_ref": "machine-pouching",
+            "_key": "k46"
+          },
+          {
+            "_type": "reference",
+            "_ref": "machine-side-seal",
+            "_key": "k47"
+          },
+          {
+            "_type": "reference",
+            "_ref": "machine-bottom-seal",
+            "_key": "k48"
+          },
+          {
+            "_type": "reference",
+            "_ref": "machine-spout",
+            "_key": "k49"
+          }
+        ]
+      }
+    ],
+    "qualityTitle": "Checked at *every stage*",
+    "qualityText": "Film is tested when it arrives, while it runs and before it leaves. The in-house lab checks each job against the product it will carry, and a certificate of analysis can travel with the consignment.",
+    "qualityImage": {
+      "_type": "image",
+      "_local": "infrastructure/quality-lab.jpg",
+      "alt": "A seal strength test in the quality lab"
+    },
+    "qualityChecklist": [
+      {
+        "_type": "checkItem",
+        "_key": "k4e",
+        "title": "Seal strength and tensile tests",
+        "text": "Confirms that the pouch holds under the weight and handling it will meet."
+      },
+      {
+        "_type": "checkItem",
+        "_key": "k4f",
+        "title": "Friction (COF), static and kinetic",
+        "text": "Confirms that the film will run cleanly on a filling machine."
+      },
+      {
+        "_type": "checkItem",
+        "_key": "k4g",
+        "title": "Thickness, oven and compression tests",
+        "text": "Micrometers, a hot-air oven and a compression tester check the laminate itself."
+      },
+      {
+        "_type": "checkItem",
+        "_key": "k4h",
+        "title": "Inspection of every printed roll",
+        "text": "The doctoring machine stops on a misprint so that it is cut out before pouching."
+      }
+    ]
+  },
+  {
+    "_id": "contactPage",
+    "_type": "contactPage",
+    "seo": {
+      "title": "Contact us | Spectra Pack",
+      "description": "Request a quote from Spectra Pack. A-1/503, GIDC Road, Phase 3, GIDC Umbergaon, Gujarat 396171. Call +91 91676 61011."
+    },
+    "title": "Contact *us*",
+    "locationTitle": "Our *location*",
+    "enquiryTitle": "Request a *quote*",
+    "enquiryLead": "Tell us what you pack and we will reply with a laminate and a price."
+  },
+  {
+    "_id": "blogPage",
+    "_type": "blogPage",
+    "seo": {
+      "title": "Blog | Guides to flexible packaging | Spectra Pack",
+      "description": "Plain-language guides to laminates, pouch formats, artwork and ordering, from the Spectra Pack press room."
+    },
+    "title": "From the *shop floor*",
+    "text": "Plain-language guides to films, formats, artwork and ordering, written from the press room for the people who buy packaging.",
+    "listTitle": "All *articles*"
+  },
+  {
+    "_id": "privacyPage",
+    "_type": "legalPage",
+    "seo": {
+      "title": "Privacy policy | Spectra Pack",
+      "description": "How Spectra Pack collects, uses and protects personal information sent through this website."
+    },
+    "title": "Privacy *policy*",
+    "updated": "5 October 2026",
+    "body": [
+      {
+        "_key": "privp0b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp0b0s0",
+            "_type": "span",
+            "text": "This policy explains what personal information Spectra Pack collects through this website, why we collect it, and the choices you have. We have tried to keep it short and in plain language.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privp1b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp1b0s0",
+            "_type": "span",
+            "text": "Who we are",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privp2b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [
+          {
+            "_key": "privp2b0l0",
+            "_type": "link",
+            "href": "mailto:info@spectrapack.co.in"
+          }
+        ],
+        "children": [
+          {
+            "_key": "privp2b0s0",
+            "_type": "span",
+            "text": "This website is run by Spectra Pack, a manufacturer of flexible packaging, at A-1/503, GIDC Road, Phase 3, GIDC Umbergaon, Umargam, Gujarat 396171, India. In this policy \"we\", \"us\" and \"our\" mean Spectra Pack. You can reach us about anything in this policy at ",
+            "marks": []
+          },
+          {
+            "_key": "privp2b0s1",
+            "_type": "span",
+            "text": "info@spectrapack.co.in",
+            "marks": [
+              "privp2b0l0"
+            ]
+          },
+          {
+            "_key": "privp2b0s2",
+            "_type": "span",
+            "text": ".",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privp3b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp3b0s0",
+            "_type": "span",
+            "text": "What we collect",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privp4b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp4b0s0",
+            "_type": "span",
+            "text": "Information you choose to send us.",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "privp4b0s1",
+            "_type": "span",
+            "text": " When you send the enquiry form, we receive the details you entered: your name, company, email address, phone number and, if you add them, your country, industry, the product you are interested in, the quantity and your message. The form is delivered through Netlify, the company that hosts this website, which keeps the submission in a password-protected account and emails it to our sales team. We also receive whatever you share when you call us, email us or message us on WhatsApp.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privp5b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp5b0s0",
+            "_type": "span",
+            "text": "Information collected automatically.",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "privp5b0s1",
+            "_type": "span",
+            "text": " This website does not set its own cookies and does not use analytics or advertising trackers. Like any website, the server that hosts it may keep standard technical logs, such as your IP address, browser type and the pages requested, for security and to keep the site running.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privp6b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp6b0s0",
+            "_type": "span",
+            "text": "Services run by other companies.",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "privp6b0s1",
+            "_type": "span",
+            "text": " Some parts of the site are provided by third parties, who receive basic technical information such as your IP address when your browser loads them:",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privp7b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp7b0s0",
+            "_type": "span",
+            "text": "Netlify",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "privp7b0s1",
+            "_type": "span",
+            "text": ", which hosts this website and receives enquiry form submissions on our behalf.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "privsanity",
+        "_type": "block",
+        "style": "normal",
+        "listItem": "bullet",
+        "level": 1,
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privsanity0",
+            "_type": "span",
+            "text": "Sanity",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "privsanity1",
+            "_type": "span",
+            "text": ", which stores the text and images of this website and delivers the images to your browser.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privp7b1",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp7b1s0",
+            "_type": "span",
+            "text": "Google Fonts",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "privp7b1s1",
+            "_type": "span",
+            "text": ", which supplies the typeface used on every page.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "privp7b2",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp7b2s0",
+            "_type": "span",
+            "text": "Google Maps",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "privp7b2s1",
+            "_type": "span",
+            "text": ", which shows our location on the contact page. Google may set its own cookies when the map loads.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "privp7b3",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp7b3s0",
+            "_type": "span",
+            "text": "WhatsApp, Instagram and Google Maps links.",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_key": "privp7b3s1",
+            "_type": "span",
+            "text": " If you follow these links, you leave our site and the other service's own privacy policy applies.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "privp8b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp8b0s0",
+            "_type": "span",
+            "text": "How we use your information",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privp9b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp9b0s0",
+            "_type": "span",
+            "text": "To reply to your enquiry and prepare a quotation.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "privp9b1",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp9b1s0",
+            "_type": "span",
+            "text": "To process, deliver and support any order you place with us.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "privp9b2",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp9b2s0",
+            "_type": "span",
+            "text": "To keep business records that the law requires us to keep, such as tax and accounting records.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "privp10b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp10b0s0",
+            "_type": "span",
+            "text": "We do not sell your personal information, and we do not send you marketing messages unless you have asked to receive them.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privp11b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp11b0s0",
+            "_type": "span",
+            "text": "Why we are allowed to use it",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privp12b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp12b0s0",
+            "_type": "span",
+            "text": "We process the information you send us with your consent, which you give by contacting us, and so that we can respond to a request you have made. You can withdraw your consent at any time by writing to us. Withdrawing it does not affect anything we did with your information before you withdrew it.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privp13b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp13b0s0",
+            "_type": "span",
+            "text": "Who we share it with",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privp14b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp14b0s0",
+            "_type": "span",
+            "text": "Your information is seen by the people at Spectra Pack who need it to answer you. It is also handled by the providers we rely on to run our business, such as our email provider and Netlify, our website host, only for that purpose. We may disclose information where the law requires it. We do not share it with anyone for their own marketing.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privp15b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp15b0s0",
+            "_type": "span",
+            "text": "How long we keep it",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privp16b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp16b0s0",
+            "_type": "span",
+            "text": "We keep enquiry correspondence for as long as it is useful for the enquiry or for an ongoing business relationship, and business records for as long as the law requires. After that we delete it.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privp17b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp17b0s0",
+            "_type": "span",
+            "text": "Your rights",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privp18b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp18b0s0",
+            "_type": "span",
+            "text": "Under India's Digital Personal Data Protection Act, 2023, you can ask us:",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privp19b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp19b0s0",
+            "_type": "span",
+            "text": "for a summary of the personal information we hold about you and how we use it;",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "privp19b1",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp19b1s0",
+            "_type": "span",
+            "text": "to correct, complete or update it;",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "privp19b2",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp19b2s0",
+            "_type": "span",
+            "text": "to erase it, where we no longer need it or you withdraw consent;",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "privp19b3",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp19b3s0",
+            "_type": "span",
+            "text": "to nominate another person to exercise these rights on your behalf.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "privp20b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [
+          {
+            "_key": "privp20b0l0",
+            "_type": "link",
+            "href": "mailto:info@spectrapack.co.in"
+          }
+        ],
+        "children": [
+          {
+            "_key": "privp20b0s0",
+            "_type": "span",
+            "text": "To make a request, write to ",
+            "marks": []
+          },
+          {
+            "_key": "privp20b0s1",
+            "_type": "span",
+            "text": "info@spectrapack.co.in",
+            "marks": [
+              "privp20b0l0"
+            ]
+          },
+          {
+            "_key": "privp20b0s2",
+            "_type": "span",
+            "text": ". We will reply within a reasonable time. If you are not satisfied with our reply, you may complain to the Data Protection Board of India.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privp21b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp21b0s0",
+            "_type": "span",
+            "text": "Keeping it safe",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privp22b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp22b0s0",
+            "_type": "span",
+            "text": "We take reasonable steps to protect the information you send us from loss and from unauthorised access. No method of sending or storing information over the internet is completely secure, so please do not send us sensitive information, such as bank or identity documents, through the enquiry form.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privp23b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp23b0s0",
+            "_type": "span",
+            "text": "Children",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privp24b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp24b0s0",
+            "_type": "span",
+            "text": "This website is meant for businesses and is not directed at children. We do not knowingly collect information from anyone under 18.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privp25b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp25b0s0",
+            "_type": "span",
+            "text": "Changes to this policy",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privp26b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "privp26b0s0",
+            "_type": "span",
+            "text": "If we change this policy, we will publish the new version on this page and update the date at the top.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "privx27",
+        "_type": "note",
+        "title": "Grievance contact",
+        "body": [
+          {
+            "_key": "privn27b0",
+            "_type": "block",
+            "style": "normal",
+            "markDefs": [
+              {
+                "_key": "privn27b0l0",
+                "_type": "link",
+                "href": "mailto:info@spectrapack.co.in"
+              }
+            ],
+            "children": [
+              {
+                "_key": "privn27b0s0",
+                "_type": "span",
+                "text": "For questions or complaints about your personal information, write to ",
+                "marks": []
+              },
+              {
+                "_key": "privn27b0s1",
+                "_type": "span",
+                "text": "info@spectrapack.co.in",
+                "marks": [
+                  "privn27b0l0"
+                ]
+              },
+              {
+                "_key": "privn27b0s2",
+                "_type": "span",
+                "text": " or to Spectra Pack, A-1/503, GIDC Road, Phase 3, GIDC Umbergaon, Umargam, Gujarat 396171, India.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "termsPage",
+    "_type": "legalPage",
+    "seo": {
+      "title": "Terms of use | Spectra Pack",
+      "description": "The terms that apply to using the Spectra Pack website, its information and its content."
+    },
+    "title": "Terms *of use*",
+    "updated": "5 October 2026",
+    "body": [
+      {
+        "_key": "termp0b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "termp0b0s0",
+            "_type": "span",
+            "text": "These terms apply to your use of this website. By using it you accept them. If you do not agree with them, please do not use the site.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "termp1b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "termp1b0s0",
+            "_type": "span",
+            "text": "About us",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "termp2b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [
+          {
+            "_key": "termp2b0l0",
+            "_type": "link",
+            "href": "mailto:info@spectrapack.co.in"
+          }
+        ],
+        "children": [
+          {
+            "_key": "termp2b0s0",
+            "_type": "span",
+            "text": "This website is run by Spectra Pack, A-1/503, GIDC Road, Phase 3, GIDC Umbergaon, Umargam, Gujarat 396171, India. You can contact us at ",
+            "marks": []
+          },
+          {
+            "_key": "termp2b0s1",
+            "_type": "span",
+            "text": "info@spectrapack.co.in",
+            "marks": [
+              "termp2b0l0"
+            ]
+          },
+          {
+            "_key": "termp2b0s2",
+            "_type": "span",
+            "text": ".",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "termp3b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "termp3b0s0",
+            "_type": "span",
+            "text": "The information on this site",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "termp4b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "termp4b0s0",
+            "_type": "span",
+            "text": "The website describes our products, processes and machinery for general information. We keep it accurate and up to date as far as we reasonably can, but:",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "termp5b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "termp5b0s0",
+            "_type": "span",
+            "text": "product descriptions, sizes, structures and machine figures are indicative and may change without notice;",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "termp5b1",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "termp5b1s0",
+            "_type": "span",
+            "text": "photographs and illustrations show typical products and are not samples of any particular order;",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "termp5b2",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "termp5b2s0",
+            "_type": "span",
+            "text": "the guides on our blog are general advice. They are not a recommendation for your specific product, which depends on its requirements and should be confirmed with us.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_key": "termp6b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "termp6b0s0",
+            "_type": "span",
+            "text": "Quotations and orders",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "termp7b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "termp7b0s0",
+            "_type": "span",
+            "text": "Nothing on this website is an offer to sell at a particular price. Sending an enquiry does not create a contract. A quotation from us is valid for the period stated on it, and an order is binding only when we have confirmed it in writing. Minimum quantities, lead times, specifications, payment and delivery terms are agreed separately for each order.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "termp8b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "termp8b0s0",
+            "_type": "span",
+            "text": "Your artwork and ours",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "termp9b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "termp9b0s0",
+            "_type": "span",
+            "text": "The text, design, graphics and photographs on this website belong to Spectra Pack or are used with permission. You may view and print pages for your own business reference, but you may not copy, republish or sell them without our written permission.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "termp10b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "termp10b0s0",
+            "_type": "span",
+            "text": "Artwork, logos and brand names that customers send us remain the property of those customers. We use them only to produce their orders.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "termp11b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "termp11b0s0",
+            "_type": "span",
+            "text": "Using the website",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "termp12b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "termp12b0s0",
+            "_type": "span",
+            "text": "Please do not use the site in a way that could damage it or affect other users. In particular, do not try to gain unauthorised access to it, do not introduce malicious code, and do not send false or misleading enquiries.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "termp13b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "termp13b0s0",
+            "_type": "span",
+            "text": "Links to other websites",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "termp14b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "termp14b0s0",
+            "_type": "span",
+            "text": "The site links to services we do not control, such as WhatsApp, Instagram and Google Maps. We are not responsible for their content or how they handle your information.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "termp15b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "termp15b0s0",
+            "_type": "span",
+            "text": "Our liability",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "termp16b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "termp16b0s0",
+            "_type": "span",
+            "text": "The website is provided as it is. As far as the law allows, we are not liable for any loss arising from your use of it, or from relying on information published on it. Nothing in these terms limits any liability that cannot be limited by law. Our responsibility for products we supply is governed by the terms of the order, not by this website.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "termp17b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "termp17b0s0",
+            "_type": "span",
+            "text": "Privacy",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "termp18b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [
+          {
+            "_key": "termp18b0l0",
+            "_type": "link",
+            "href": "/privacy/"
+          }
+        ],
+        "children": [
+          {
+            "_key": "termp18b0s0",
+            "_type": "span",
+            "text": "How we handle personal information is explained in our ",
+            "marks": []
+          },
+          {
+            "_key": "termp18b0s1",
+            "_type": "span",
+            "text": "privacy policy",
+            "marks": [
+              "termp18b0l0"
+            ]
+          },
+          {
+            "_key": "termp18b0s2",
+            "_type": "span",
+            "text": ".",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "termp19b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "termp19b0s0",
+            "_type": "span",
+            "text": "Changes to these terms",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "termp20b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "termp20b0s0",
+            "_type": "span",
+            "text": "We may update these terms from time to time. The version on this page, with the date shown at the top, is the one that applies.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "termp21b0",
+        "_type": "block",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "termp21b0s0",
+            "_type": "span",
+            "text": "Governing law",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_key": "termp22b0",
+        "_type": "block",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "termp22b0s0",
+            "_type": "span",
+            "text": "These terms are governed by the laws of India. The courts at Valsad, Gujarat, have jurisdiction over any dispute arising from them.",
+            "marks": []
+          }
+        ]
+      }
+    ]
+  }
+]

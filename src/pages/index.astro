@@ -1,0 +1,208 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import Media from '../components/Media.astro';
+import { getDoc, listOf, deref, localDimensions } from '../lib/content.js';
+import { imageAttrs, aspectOf } from '../lib/image.js';
+import { accent, logoWidth } from '../lib/text.js';
+import { BLOG_CATEGORIES } from '../lib/options.js';
+
+const home = await getDoc('homePage');
+const dims = await localDimensions();
+const [industries, clients, posts] = await Promise.all([listOf('industry'), listOf('client'), listOf('blogPost')]);
+
+const HERO_SIZES = '(max-width: 1023px) calc(100vw - 40px), min(1280px, 100vw - 160px)';
+const HERO_WIDTHS = [800, 1280, 1672];
+const photos = home.heroPhotos || [];
+const first = imageAttrs(photos[0], dims, { widths: HERO_WIDTHS });
+
+/** Finder tiles and chips link to a product search and borrow the product's photo. */
+const withProduct = async (items = []) =>
+  Promise.all(items.map(async (item) => ({ ...item, doc: await deref(item.product) })));
+const tiles = await withProduct(home.finderTiles);
+const chips = await withProduct(home.finderChips);
+const search = (q) => `/products/?q=${encodeURIComponent(q || '')}`;
+
+const guides = posts.slice(0, 3);
+const categoryTitle = (value) => BLOG_CATEGORIES.find((c) => c.value === value)?.title ?? value;
+const guideCategories = [...new Set(guides.map((p) => p.category).filter(Boolean))];
+---
+<Base seo={home.seo} nav="home" css="home" scripts={['reveal', 'hero', 'carousel', 'filter']} orgData
+  preload={first ? { href: first.src, srcset: first.srcset, sizes: HERO_SIZES } : undefined}>
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero__frame" data-hero-rotator>
+      <div class="hero__intro">
+        <div class="hero__brandline">
+          <h1 class="hero__title" id="hero-title">{home.heroTitle}<span class="accent">.</span>{home.heroTitleHidden && <span class="visually-hidden"> {home.heroTitleHidden}</span>}</h1>
+          <p class="hero__mark"><span>{home.heroMarkTop}</span><b>{home.heroMarkNumber}</b><span>{home.heroMarkBottom}</span></p>
+        </div>
+        <div class="hero__row">
+          <Media image={home.heroThumb} class="hero__thumb" loading="eager" widths={[240, 480]} sizes="160px" />
+          <div>
+            <p class="hero__text">{home.heroText}</p>
+            <div class="hero__actions">
+              {home.heroPrimary?.label && <a class="hero__pill" href={home.heroPrimary.href}>{home.heroPrimary.label}</a>}
+              {home.heroSecondary?.label && <a class="hero__pill hero__pill--go" href={home.heroSecondary.href}>{home.heroSecondary.label} <span class="hero__arrow"><Icon name="arrow-up-right" /></span></a>}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__stage">
+        {photos.map((photo, i) => (
+          <Media image={photo} class:list={['media--fill media--dark hero__photo', { 'is-active': i === 0 }]}
+            attrs={{ 'data-hero-slide': '' }} ariaHidden={i > 0}
+            widths={HERO_WIDTHS} sizes={HERO_SIZES} priority={i === 0} deferred={i > 0} />
+        ))}
+        <div class="hero__corner">
+          <a class="hero__panel" href={home.heroPanelHref} aria-label={`${home.heroPanelTitle}: see the process`}>
+            <Media image={home.heroPanelImage} class="media--fill media--dark" loading="eager" widths={[400, 800]} sizes="320px" />
+            <span class="hero__panel-mark" aria-hidden="true">{home.heroMarkNumber}</span>
+            <span class="hero__panel-text" aria-hidden="true"><b>{home.heroPanelTitle}</b><span>{home.heroPanelText}</span></span>
+          </a>
+        </div>
+      </div>
+      {photos.length > 1 && (
+        <div class="hero__controls">
+          {photos.map((_, i) => (
+            <button class:list={['hero__dot', { 'is-active': i === 0 }]} type="button" data-hero-dot aria-label={`Show photo ${i + 1} of ${photos.length}`} aria-current={i === 0 ? 'true' : undefined}><span></span></button>
+          ))}
+          <button class="hero__toggle" type="button" data-hero-toggle aria-pressed="false" aria-label="Pause photos"><Icon name="pause" class="icon--pause" /><Icon name="play" class="icon--play" /></button>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <section class="story" aria-labelledby="story-title">
+    <Media image={home.storyBackground} class="media--fill" widths={[960, 1920]} sizes="100vw" />
+    <div class="container story__grid">
+      <h2 class="story__title" id="story-title" data-reveal set:html={accent(home.storyTitle)} />
+      <div>
+        <p class="story__quote" data-reveal><span>&ldquo;</span> {home.storyQuote} <span>&rdquo;</span></p>
+        <ul class="story__cards">
+          {(home.storyCards || []).map((card, i) => (
+            <li data-reveal style={`--i:${i}`}><a class="thumb-card" href={card.href}><Media image={card.image} widths={[400, 735]} sizes="(max-width: 767px) 80vw, 300px" /><h3 class="thumb-card__title">{card.title}</h3></a></li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="clients" aria-labelledby="clients-title">
+    <div class="container">
+      <div class="clients__head" data-reveal>
+        <p class="clients__count"><b>{home.clientsCount}</b><span>{home.clientsCountLabel}</span></p>
+        <div>
+          <h2 class="section-title section-title--sm" id="clients-title" set:html={accent(home.clientsTitle)} />
+          <p class="clients__lead">{home.clientsLead}</p>
+        </div>
+      </div>
+      <ul class="clients__grid">
+        {clients.map((client, i) => (
+          <li data-reveal style={`--i:${i % 5}`}><Media image={{ ...client.logo, alt: client.name }} class="media--logo" label={client.name} widths={[300, 600]} sizes="200px" imgStyle={`width:${logoWidth(aspectOf(client.logo, dims))}`} /></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="markets" aria-labelledby="markets-title">
+    <div class="container section-head" data-reveal>
+      <h2 class="section-title" id="markets-title" set:html={accent(home.marketsTitle)} />
+      <p class="section-kicker">{home.marketsKicker}</p>
+      <p class="section-lead">{home.marketsLead}</p>
+    </div>
+    <div class="carousel" data-carousel data-reveal>
+      <button class="round-btn carousel__prev" type="button" data-carousel-prev aria-label="Previous industries"><Icon name="arrow-left" /></button>
+      <button class="round-btn carousel__next" type="button" data-carousel-next aria-label="More industries"><Icon name="arrow" /></button>
+      <ul class="carousel__track" data-carousel-track>
+        {industries.map((ind) => (
+          <li class="carousel__item"><a class="market-card" href={`/industries/#${ind.slug?.current}`}><Media image={ind.image} widths={[480, 960]} sizes="(max-width: 767px) 75vw, 360px" /><h3 class="market-card__title">{ind.title}</h3><span class="round-btn round-btn--soft"><Icon name="arrow" /></span></a></li>
+        ))}
+      </ul>
+      <div class="container"><div class="carousel__bar"><span data-carousel-thumb></span></div></div>
+    </div>
+  </section>
+
+  <section class="finder" data-finder aria-labelledby="finder-title">
+    <div class="container">
+      <h2 class="finder__title" id="finder-title" data-reveal>{home.finderTitle}</h2>
+      <form class="search" action="/products/" method="get" role="search" data-reveal>
+        <label class="visually-hidden" for="finder-input">Search products</label>
+        <input id="finder-input" name="q" type="search" placeholder={home.finderPlaceholder} autocomplete="off" maxlength="60" data-finder-input>
+        <button class="round-btn" type="submit" aria-label="Search all products"><Icon name="search" /></button>
+      </form>
+      <p class="finder__question" data-reveal>{home.finderQuestion}</p>
+      <div class="tiles">
+        {tiles.map((tile, i) => (
+          <a class="tile" href={search(tile.query)} data-finder-item data-keywords={tile.doc?.keywords} data-reveal style={`--i:${i % 5}`}><Media image={tile.doc?.image} widths={[400, 800]} sizes="(max-width: 767px) 50vw, 240px" /><h3 class="tile__title" data-finder-label>{tile.label}</h3></a>
+        ))}
+      </div>
+      <p class="finder__empty" data-finder-empty hidden>Nothing here matches that. <a href="/products/">Browse the full product list</a> or <a href="/contact/#enquiry">tell us what you need</a>.</p>
+      <div class="chips">
+        {chips.map((chip) => (
+          <a class="chip-card" href={search(chip.query)} data-finder-item data-keywords={chip.doc?.keywords}><Media image={chip.doc?.image} widths={[160, 320]} sizes="64px" /><span data-finder-label>{chip.label}</span></a>
+        ))}
+      </div>
+      {home.finderButton?.label && <div class="section-cta"><a class="btn" href={home.finderButton.href}><span class="btn__dot"><Icon name="chevron" /></span>{home.finderButton.label}</a></div>}
+    </div>
+  </section>
+
+  <section class="panel-wrap" aria-labelledby="panel-title">
+    <div class="panel">
+      <Media image={home.panelImage} class="media--dark panel__media" widths={[700, 1400]} sizes="(max-width: 1023px) 100vw, 50vw" />
+      <div class="panel__body">
+        <h2 class="panel__title" id="panel-title" data-reveal set:html={accent(home.panelTitle, 'em')} />
+        <ul class="stats" data-reveal>
+          {(home.panelStats || []).map((stat) => (
+            <li class="stat"><Icon name={stat.icon} /><span class="stat__value">{stat.value}{stat.unit && <small>{stat.unit}</small>}</span><span class="stat__label">{stat.label}</span></li>
+          ))}
+        </ul>
+        <p class="panel__text" data-reveal>{home.panelText}</p>
+        {home.panelButton?.label && <a class="btn btn--light" href={home.panelButton.href}><span class="btn__dot"><Icon name="chevron" /></span>{home.panelButton.label}</a>}
+      </div>
+    </div>
+  </section>
+
+  <section class="section guides" data-filter aria-labelledby="guides-title">
+    <div class="container">
+      <div class="guides__head" data-reveal>
+        <h2 class="section-title" id="guides-title" set:html={accent(home.guidesTitle)} />
+        <div class="pills" role="group" aria-label="Filter articles">
+          <button class="pill is-active" type="button" data-filter-value="all" aria-pressed="true">All</button>
+          {guideCategories.map((c) => <button class="pill" type="button" data-filter-value={c} aria-pressed="false">{categoryTitle(c)}</button>)}
+        </div>
+      </div>
+      <div class="guides__grid" data-filter-list>
+        {guides.map((post, i) => (
+          <a class:list={['guide', { 'guide--tall': i === 0 }]} href={`/blog/${post.slug?.current}/`} data-tags={post.category}>
+            <Media image={post.image} class="media--fill" widths={[480, 800, 1264]} sizes={i === 0 ? '(max-width: 767px) 100vw, 50vw' : '(max-width: 767px) 100vw, 40vw'} />
+            <div class="guide__body">
+              <ul class="guide__tags">{(post.tags || []).map((t) => <li>{t}</li>)}</ul>
+              <h3 class="guide__title">{post.title}</h3>
+              <p class="guide__meta"><span>{post.readMinutes} min read</span><span class="round-btn round-btn--soft"><Icon name="arrow" /></span></p>
+            </div>
+          </a>
+        ))}
+      </div>
+      {home.guidesButton?.label && <div class="section-cta"><a class="btn" href={home.guidesButton.href}><span class="btn__dot"><Icon name="chevron" /></span>{home.guidesButton.label}</a></div>}
+    </div>
+  </section>
+
+  <section class="marks" aria-labelledby="fitments-title">
+    <div class="container">
+      <h2 class="marks__title" id="fitments-title" set:html={accent(home.fitmentsTitle)} />
+      <ul class="marks__list">
+        {(home.fitments || []).map((f) => <li>{f}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="marks marks--soft" aria-labelledby="export-title">
+    <div class="container">
+      <h2 class="marks__title" id="export-title" set:html={accent(home.exportsTitle)} />
+      <ul class="marks__list">
+        {(home.exportMarkets || []).map((m) => <li><small>{m.code}</small>{m.name}</li>)}
+      </ul>
+    </div>
+  </section>
+</Base>

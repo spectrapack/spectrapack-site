@@ -1,0 +1,106 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import Crumbs from '../components/Crumbs.astro';
+import QuickLinks from '../components/QuickLinks.astro';
+import { getDoc, listOf } from '../lib/content.js';
+import { accent, nbsp } from '../lib/text.js';
+
+const page = await getDoc('contactPage');
+const site = await getDoc('siteSettings');
+const [industries, products] = await Promise.all([listOf('industry'), listOf('product')]);
+
+const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(site.mapQuery || '').replace(/%20/g, '+').replace(/%2C/g, ',')}&z=15&output=embed`;
+
+/** Netlify Forms stores each enquiry and emails it on; nothing personal touches Sanity. */
+const FIELDS = [
+  { id: 'name', label: 'Contact name', type: 'text', max: 120, auto: 'name', required: true },
+  { id: 'company', label: 'Company', type: 'text', max: 120, auto: 'organization', required: true },
+  { id: 'email', label: 'Email', type: 'email', max: 120, auto: 'email', required: true },
+  { id: 'phone', label: 'Mobile phone', type: 'tel', max: 20, auto: 'tel', required: true },
+  { id: 'country', label: 'Country', type: 'text', max: 60, auto: 'country-name' },
+];
+const SELECTS = [
+  { id: 'industry', label: 'Industry', options: [...industries.map((i) => i.title), 'Other'] },
+  { id: 'product', label: 'Product', options: [...products.map((p) => p.title), 'Not sure yet'] },
+];
+---
+<Base seo={page.seo} title="Contact us" nav="contact" css="contact" scripts={['reveal', 'form']} orgData>
+
+  <section class="page-hero page-hero--band page-hero--overlap" aria-labelledby="page-title">
+    <div class="container">
+      <Crumbs items={[{ label: 'Home', href: '/' }, { label: 'Contact us' }]} />
+      <h1 class="page-hero__title page-hero__title--xl" id="page-title" set:html={accent(page.title)} />
+    </div>
+  </section>
+
+  <div class="container sheets">
+    <section class="sheet" aria-labelledby="location-title">
+      <h2 class="sheet__title" id="location-title" set:html={accent(page.locationTitle)} />
+      <div class="map">
+        <iframe src={mapSrc} title={`Map showing ${site.mapQuery}`} loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <section class="sheet" id="enquiry" aria-labelledby="enquiry-title">
+      <h2 class="sheet__title" id="enquiry-title" set:html={accent(page.enquiryTitle)} />
+      <div class="info-tiles">
+        <div class="info-tile">
+          <div>
+            <h3>Address</h3>
+            <p>{(site.addressLines || []).join(' ')}{site.directionsUrl && <><br><a href={site.directionsUrl} target="_blank" rel="noopener">Get directions</a></>}</p>
+          </div>
+          <span class="info-tile__icon"><Icon name="pin" /></span>
+        </div>
+        <div class="info-tile info-tile--gold">
+          <div>
+            <h3>Phone and email</h3>
+            <p>{(site.phones || []).map((p, i) => <>{i > 0 && ' / '}<a href={`tel:${p.link}`} set:html={nbsp(p.label)} /></>)}<br><a href={`mailto:${site.email}`}>{site.email}</a></p>
+          </div>
+          <span class="info-tile__icon"><Icon name="phone" /></span>
+        </div>
+      </div>
+
+      <p class="sheet__sub">{page.enquiryLead}</p>
+
+      <form class="form" name="enquiry" method="POST" action="/thanks/" novalidate data-enquiry-form data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="enquiry">
+        <p class="visually-hidden" aria-hidden="true"><label>Leave this empty <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        {FIELDS.map((f) => (
+          <div class="field">
+            <label for={f.id}>{f.label}{f.required && ' *'}</label>
+            <input id={f.id} name={f.id} type={f.type} maxlength={f.max} aria-describedby={`${f.id}-error`} autocomplete={f.auto} required={f.required}>
+            <p class="field__error" id={`${f.id}-error`} hidden></p>
+          </div>
+        ))}
+        {SELECTS.map((s) => (
+          <div class="field">
+            <label for={s.id}>{s.label}</label>
+            <select id={s.id} name={s.id} aria-describedby={`${s.id}-error`}>
+              <option value="">Select</option>
+              {s.options.map((o) => <option>{o}</option>)}
+            </select>
+            <p class="field__error" id={`${s.id}-error`} hidden></p>
+          </div>
+        ))}
+        <div class="field">
+          <label for="quantity">Quantity</label>
+          <input id="quantity" name="quantity" type="text" maxlength="60" aria-describedby="quantity-hint quantity-error">
+          <p class="field__hint" id="quantity-hint">For example: 5,000 pouches, or 300 kg of roll stock.</p><p class="field__error" id="quantity-error" hidden></p>
+        </div>
+        <div class="field field--full">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" maxlength="1500" aria-describedby="message-hint message-error"></textarea>
+          <p class="field__hint" id="message-hint">Pouch size, what goes inside and the fill weight help us quote quickly.</p><p class="field__error" id="message-error" hidden></p>
+        </div>
+        <div class="form__actions">
+          <button class="btn btn--solid" type="submit"><span class="btn__dot"><Icon name="chevron" /></span>Send enquiry</button>
+          <p class="form__status" role="status" aria-live="polite" data-form-status></p>
+          <p class="form__consent">By sending this enquiry you agree that we may use these details to reply to you, as described in our <a href="/privacy/">privacy policy</a>.</p>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <QuickLinks except="contact" />
+</Base>

@@ -1,0 +1,309 @@
+/* Detail-style pages (industries, infrastructure): centred details, process line, machine cards. */
+
+/* ---------- centred details block ---------- */
+.details {
+  text-align: center;
+}
+
+.details__title {
+  max-width: 17em;
+  margin-inline: auto;
+  font-size: clamp(1.875rem, 1.3rem + 2.4vw, 3.375rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.details__lead {
+  max-width: 50em;
+  margin: 32px auto 0;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+.details__copy {
+  max-width: 62em;
+  margin: 28px auto 0;
+  color: var(--c-ink-2);
+  font-size: var(--fs-small);
+  line-height: 2;
+}
+
+.details__copy p + p {
+  margin-top: 20px;
+}
+
+.cards-section {
+  padding-block: 48px clamp(3.5rem, 2rem + 5vw, 6.25rem);
+  background: #fafafa;
+}
+
+/* ---------- process line: the four stages ---------- */
+.process {
+  display: grid;
+  margin-top: 48px;
+}
+
+.stage {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr) minmax(0, 0.8fr);
+  align-items: start;
+  gap: clamp(1.25rem, 0.5rem + 3vw, 3.5rem);
+  padding-block: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+  border-top: 1px solid var(--c-line);
+}
+
+.stage:last-child {
+  border-bottom: 1px solid var(--c-line);
+}
+
+.stage__num {
+  color: var(--c-accent);
+  font-size: clamp(2.5rem, 2rem + 2vw, 4rem);
+  font-weight: 300;
+  line-height: 1;
+}
+
+.stage__num small {
+  display: block;
+  margin-top: 10px;
+  color: var(--c-muted);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+}
+
+.stage__title {
+  font-size: var(--fs-h2-sm);
+  font-weight: 700;
+}
+
+.stage__text {
+  max-width: 34em;
+  margin-top: 14px;
+  color: var(--c-ink-2);
+  line-height: 1.75;
+}
+
+.stage__why {
+  max-width: 34em;
+  margin-top: 16px;
+  padding-left: 16px;
+  border-left: 2px solid var(--c-accent);
+  color: var(--c-muted);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+.specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.specs li {
+  padding: 5px 12px;
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius-pill);
+  background: var(--c-paper);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  white-space: nowrap;
+}
+
+.stage > .media {
+  border-radius: var(--radius);
+  --ratio: 4 / 3;
+}
+
+.stage .checklist {
+  max-width: 34em;
+}
+
+/* the machines used at this step, under the step's text */
+.stage__machines {
+  grid-column: 2 / -1;
+  padding-top: clamp(0.5rem, 0.25rem + 1vw, 1rem);
+}
+
+.stage__machines-title {
+  margin-bottom: 18px;
+  color: var(--c-muted);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.stage__machines-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* ---------- machine cards: photo on the left, details on the right ----------
+   A list-style card reads well whether a step has one machine or four. */
+.machine {
+  display: grid;
+  grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
+  grid-template-rows: auto auto 1fr;
+  column-gap: 18px;
+  align-content: start;
+  padding: 14px;
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius);
+  background: var(--c-paper);
+}
+
+.machine .media {
+  grid-row: 1 / -1;
+  align-self: start;
+  border-radius: 10px;
+  --ratio: 4 / 3;
+}
+
+.machine__title {
+  margin-top: 2px;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.machine__plain {
+  margin-top: 6px;
+  color: var(--c-ink-2);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.machine .specs {
+  align-self: start;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+/* ---------- split block: image + checklist (artwork, quality) ---------- */
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(2rem, 1rem + 5vw, 6rem);
+}
+
+.split .media {
+  border-radius: var(--radius);
+  --ratio: 3 / 2;
+}
+
+.split__text {
+  margin-top: 20px;
+  color: var(--c-ink-2);
+  line-height: 1.75;
+}
+
+.checklist {
+  display: grid;
+  gap: 0;
+  margin-top: 24px;
+}
+
+.checklist li {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 8px;
+  padding-block: 14px;
+  border-top: 1px solid var(--c-line);
+  line-height: 1.6;
+}
+
+.checklist .icon {
+  margin-top: 3px;
+  color: var(--c-accent);
+}
+
+.checklist strong {
+  display: block;
+}
+
+.checklist span {
+  color: var(--c-muted);
+  font-size: 0.9375rem;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 1023px) {
+  .stage {
+    grid-template-columns: 84px minmax(0, 1fr);
+  }
+
+  .stage > .media {
+    grid-column: 2;
+  }
+
+  .stage__machines-list {
+    grid-template-columns: 1fr;
+  }
+  .split {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .stage {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .stage__num {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .stage__num small {
+    margin-top: 0;
+  }
+
+  .stage > .media,
+  .stage__machines {
+    grid-column: auto;
+  }
+
+  .stage__machines-list {
+    gap: 12px;
+  }
+
+  .machine {
+    grid-template-columns: 112px minmax(0, 1fr);
+    column-gap: 14px;
+    padding: 12px;
+  }
+
+  .machine .specs {
+    display: none;
+  }
+
+  /* the thumbnail is too small for the placeholder's file name; the ID is enough */
+  .machine .media__label span {
+    display: none;
+  }
+
+  .machine__title {
+    font-size: 1rem;
+  }
+
+  .machine__plain {
+    font-size: 0.8125rem;
+  }
+
+  /* intro paragraphs read better left-aligned on a narrow screen */
+  .details {
+    text-align: left;
+  }
+
+  .details__title,
+  .details__lead,
+  .details__copy {
+    margin-inline: 0;
+  }
+}

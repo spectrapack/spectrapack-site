@@ -1,0 +1,274 @@
+/* About page sections, in page order. */
+
+/* ---------- intro ---------- */
+.intro {
+  text-align: center;
+}
+
+.intro__copy {
+  max-width: 900px;
+  margin: 28px auto 0;
+  color: var(--c-ink-2);
+  font-size: 0.9375rem;
+  line-height: 1.9;
+}
+
+.intro__copy p + p {
+  margin-top: 18px;
+}
+
+.intro__copy strong {
+  color: var(--c-ink);
+}
+
+.intro__copy .accent {
+  font-size: var(--fs-small);
+}
+
+.intro .media {
+  max-width: 632px;
+  margin: 48px auto 0;
+  border-radius: 12px;
+  --ratio: 3 / 2;
+}
+
+/* ---------- overview: plant image + headline numbers ---------- */
+.overview .media {
+  margin-top: 48px;
+  border-radius: var(--radius);
+  --ratio: 16 / 7;
+}
+
+.overview__nums {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+  text-align: center;
+}
+
+.overview__nums dt {
+  font-size: clamp(2.5rem, 1.5rem + 3.5vw, 4.5rem);
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.overview__nums dt small {
+  font-size: 0.4em;
+}
+
+.overview__nums dd {
+  margin-top: 8px;
+  color: var(--c-ink-2);
+  font-size: var(--fs-small);
+  font-weight: 700;
+}
+
+.section-head + .tiles {
+  margin-top: 48px;
+}
+
+/* ---------- what we run: left heading + overlay-card carousel ---------- */
+.business__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.business__head p {
+  max-width: 46em;
+  margin-top: 24px;
+  color: var(--c-ink-2);
+  line-height: 1.75;
+}
+
+.business__arrows {
+  display: flex;
+  gap: 12px;
+}
+
+.business .carousel {
+  margin-top: 40px;
+  --card-w: clamp(280px, 36vw, 524px);
+}
+
+.overlay-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: clamp(320px, 30vw, 420px);
+  padding: 28px 32px;
+  border-radius: var(--radius-sm);
+  color: var(--c-on-deep);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.overlay-card .media {
+  z-index: -2;
+}
+
+.overlay-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top, rgba(28, 23, 21, 0.88) 0%, rgba(28, 23, 21, 0.1) 62%);
+}
+
+.overlay-card__step {
+  color: var(--c-gold-light);
+  font-family: var(--font-mono);
+  font-size: var(--fs-tiny);
+  letter-spacing: 0.1em;
+}
+
+.overlay-card__title {
+  margin-top: 8px;
+  font-size: 1.625rem;
+  font-weight: 700;
+}
+
+.overlay-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 12px;
+  color: var(--c-on-deep-muted);
+  font-size: var(--fs-small);
+}
+
+/* ---------- timeline ---------- */
+.timeline__lead {
+  max-width: 1080px;
+  margin-inline: auto;
+  color: var(--c-accent-dark);
+  font-size: var(--fs-h2-sm);
+  font-weight: 700;
+  line-height: 1.45;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.timeline__list {
+  position: relative;
+  display: grid;
+  gap: clamp(2.5rem, 1.5rem + 4vw, 5rem);
+  margin-top: clamp(2.5rem, 1.5rem + 4vw, 5rem);
+}
+
+.timeline__item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1.5rem, 1rem + 4vw, 5rem);
+}
+
+.timeline__item:nth-child(even) .media {
+  order: 2;
+}
+
+.timeline__item .media {
+  border-radius: var(--radius);
+  --ratio: 3 / 2;
+}
+
+.timeline__year {
+  color: var(--c-accent);
+  font-size: clamp(3rem, 2rem + 3.4vw, 4.5rem);
+  font-weight: 300;
+  line-height: 1;
+}
+
+.timeline__title {
+  margin-top: 16px;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.timeline__text {
+  max-width: 34em;
+  margin-top: 10px;
+  color: var(--c-ink-2);
+  line-height: 1.75;
+}
+
+/* ---------- leadership ---------- */
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.team__grid .media {
+  border-radius: var(--radius);
+  --ratio: 4 / 5;
+}
+
+.team__name {
+  margin-top: 16px;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.team__role {
+  color: var(--c-muted);
+  font-size: var(--fs-small);
+}
+
+.team__note {
+  max-width: 60ch;
+  margin: 40px auto 0;
+  color: var(--c-ink-2);
+  font-size: var(--fs-lead);
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 1023px) {
+  .overview__nums {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px 16px;
+  }
+
+  .team__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .overview .media {
+    --ratio: 4 / 3;
+  }
+
+  .business__head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .business__arrows {
+    display: none;
+  }
+
+  .business .carousel {
+    --card-w: 78vw;
+  }
+
+  .timeline__item {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline__item:nth-child(even) .media {
+    order: 0;
+  }
+
+  .team__grid {
+    gap: 24px 14px;
+  }
+}

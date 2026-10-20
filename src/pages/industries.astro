@@ -1,0 +1,82 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import Media from '../components/Media.astro';
+import Crumbs from '../components/Crumbs.astro';
+import QuickLinks from '../components/QuickLinks.astro';
+import { getDoc, listOf, deref } from '../lib/content.js';
+import { accent } from '../lib/text.js';
+
+const page = await getDoc('industriesPage');
+const industries = await listOf('industry');
+const related = (await Promise.all((page.related || []).map(async (r) => ({ ...r, doc: await deref(r.product) })))).filter((r) => r.doc);
+---
+<Base seo={page.seo} title="Industries" nav="industries" css="detail" scripts={['reveal', 'carousel', 'tabs']}>
+
+  <section class="page-hero page-hero--circle" aria-labelledby="page-title">
+    <div class="container">
+      <Crumbs items={[{ label: 'Home', href: '/' }, { label: 'Industries' }]} />
+      <div class="page-hero__grid">
+        <Media image={page.image} priority widths={[500, 1000]} sizes="(max-width: 1023px) 80vw, 480px" />
+        <div class="page-hero__body">
+          <p class="eyebrow">{page.eyebrow}</p>
+          <h1 class="page-hero__light" id="page-title" set:html={accent(page.title)} />
+          {page.button?.label && <a class="btn" href={page.button.href}><span class="btn__dot"><Icon name="chevron" /></span>{page.button.label}</a>}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="subnav" aria-label="On this page" data-subnav>
+    <ul>
+      <li><a href="#overview" class="is-active">Details</a></li>
+      <li><a href="#sectors">Sectors</a></li>
+      <li><a href="#related">You might need</a></li>
+    </ul>
+  </nav>
+
+  <section class="section details" id="overview" aria-labelledby="overview-title">
+    <div class="container">
+      <h2 class="details__title" id="overview-title" data-reveal set:html={accent(page.detailsTitle)} />
+      <p class="details__lead" data-reveal>{page.detailsLead}</p>
+      <div class="details__copy" data-reveal>
+        {(page.detailsCopy || []).map((p) => <p>{p}</p>)}
+      </div>
+    </div>
+  </section>
+
+  <section id="sectors" aria-labelledby="sectors-title">
+    <h2 class="band-title" id="sectors-title" set:html={accent(page.sectorsTitle)} />
+    <div class="cards-section">
+      <div class="container subcards">
+        {industries.map((ind, i) => (
+          <a class="subcard" id={ind.slug?.current} href={`/products/?industry=${ind.slug?.current}`} data-reveal style={`--i:${i % 4}`}>
+            <Media image={ind.image} widths={[480, 960]} sizes="(max-width: 767px) 100vw, 300px" />
+            <h3 class="subcard__title">{ind.title}</h3>
+            <p class="subcard__text">{ind.text}</p>
+            <span class="text-link">View formats <Icon name="arrow" /></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="related" aria-labelledby="related-title">
+    <div class="related" data-carousel>
+      <div class="related__head" data-reveal>
+        <h2 class="section-title" id="related-title" set:html={accent(page.relatedTitle)} />
+        {page.relatedButton?.label && <a class="btn" href={page.relatedButton.href}><span class="btn__dot"><Icon name="chevron" /></span>{page.relatedButton.label}</a>}
+      </div>
+      <div class="carousel">
+        <ul class="carousel__track" data-carousel-track>
+          {related.map((r) => (
+            <li class="carousel__item"><a class="market-card" href={`/products/?q=${encodeURIComponent(r.query || '')}`}><Media image={r.doc.image} widths={[400, 800]} sizes="(max-width: 767px) 75vw, 360px" /><h3 class="market-card__title">{r.doc.title}</h3></a></li>
+          ))}
+        </ul>
+        <div class="carousel__bar"><span data-carousel-thumb></span></div>
+      </div>
+    </div>
+  </section>
+
+  <QuickLinks except="industries" />
+</Base>

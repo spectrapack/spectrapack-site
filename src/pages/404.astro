@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import Crumbs from '../components/Crumbs.astro';
+import { getDoc } from '../lib/content.js';
+
+const site = await getDoc('siteSettings');
+---
+<Base seo={{ title: `Page not found | ${site.companyName}`, description: `This page does not exist. Find flexible packaging products, industries and contact details on the ${site.companyName} website.` }} noindex>
+  <section class="page-hero page-hero--band" aria-labelledby="page-title">
+    <div class="container">
+      <Crumbs items={[{ label: 'Home', href: '/' }, { label: 'Page not found' }]} />
+      <h1 class="page-hero__title page-hero__title--xl" id="page-title">This page has <span class="accent">gone to press</span></h1>
+      <p class="page-hero__text">We could not find the page you were looking for. It may have moved, or the link may be mistyped.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container status-page">
+      <p class="status-page__text">Try one of these instead:</p>
+      <div class="status-page__actions">
+        <a class="btn btn--solid" href="/"><span class="btn__dot"><Icon name="chevron" /></span>Home page</a>
+        <a class="btn" href="/products/"><span class="btn__dot"><Icon name="chevron" /></span>Products</a>
+        <a class="btn" href="/contact/"><span class="btn__dot"><Icon name="chevron" /></span>Contact us</a>
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,71 @@
+---
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import Media from '../../components/Media.astro';
+import Crumbs from '../../components/Crumbs.astro';
+import { getDoc, listOf, deref } from '../../lib/content.js';
+import { richText } from '../../lib/portableText.js';
+
+export async function getStaticPaths() {
+  const posts = await listOf('blogPost');
+  return posts.filter((p) => p.slug?.current).map((post) => ({ params: { slug: post.slug.current }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const site = await getDoc('siteSettings');
+const picked = (await Promise.all((post.related || []).map(deref))).filter(Boolean);
+const more = picked.length ? picked : (await listOf('blogPost')).filter((p) => p._id !== post._id).slice(0, 3);
+---
+<Base seo={{ ...post.seo, ogImage: post.seo?.ogImage?.asset ? post.seo.ogImage : post.image }} title={post.title} nav="blog" css="blog">
+
+  <article class="article" aria-labelledby="page-title">
+    <header class="article__head">
+      <div class="container">
+        <Crumbs items={[{ label: 'Home', href: '/' }, { label: 'Blog', href: '/blog/' }, { label: post.title }]} />
+        <div class="article__intro">
+          <ul class="guide__tags">{(post.tags || []).map((t) => <li>{t}</li>)}</ul>
+          <h1 class="article__title" id="page-title">{post.title}</h1>
+          <p class="article__standfirst">{post.excerpt}</p>
+          <p class="article__meta">By the {site.companyName} team <span aria-hidden="true">&middot;</span> {post.readMinutes} min read</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <Media image={post.image} class="article__hero" loading="eager" widths={[640, 960, 1264]} sizes="(max-width: 1023px) 100vw, 960px" />
+      <div class="prose" set:html={richText(post.body)} />
+
+      <div class="article__cta">
+        <div>
+          <h2>Have a product to pack?</h2>
+          <p>Tell us what it is and how it is sold. We will reply with a laminate, a format and a price.</p>
+        </div>
+        <a class="btn btn--solid" href="/contact/#enquiry"><span class="btn__dot"><Icon name="chevron" /></span>Request a quote</a>
+      </div>
+    </div>
+  </article>
+
+  {more.length > 0 && (
+    <section class="section section--panel" aria-labelledby="more-title">
+      <div class="container">
+        <div class="guides__head">
+          <h2 class="section-title section-title--sm" id="more-title">More from the <span class="accent">shop floor</span></h2>
+          <a class="btn btn--sm" href="/blog/"><span class="btn__dot"><Icon name="chevron" /></span>All articles</a>
+        </div>
+        <div class="posts">
+          {more.map((p) => (
+            <a class="post-card" href={`/blog/${p.slug?.current}/`} data-tags={p.category}>
+              <Media image={p.image} widths={[480, 800]} sizes="(max-width: 767px) 100vw, 33vw" />
+              <div class="post-card__body">
+                <ul class="guide__tags">{(p.tags || []).map((t) => <li>{t}</li>)}</ul>
+                <h3 class="post-card__title">{p.title}</h3>
+                <p class="post-card__text">{p.excerpt}</p>
+                <p class="post-card__meta"><span>{p.readMinutes} min read</span><span class="round-btn round-btn--soft"><Icon name="arrow" /></span></p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+</Base>

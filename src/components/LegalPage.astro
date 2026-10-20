@@ -1,0 +1,27 @@
+---
+/** Privacy policy and Terms of use share this layout. */
+import Base from '../layouts/Base.astro';
+import Crumbs from './Crumbs.astro';
+import { getDoc } from '../lib/content.js';
+import { accent, plain } from '../lib/text.js';
+import { richText } from '../lib/portableText.js';
+
+interface Props { id: 'privacyPage' | 'termsPage' }
+const page = await getDoc(Astro.props.id);
+const label = plain(page.title);
+---
+<Base seo={page.seo} title={label} legal={Astro.props.id === 'privacyPage' ? 'privacy' : 'terms'}>
+  <section class="page-hero page-hero--band" aria-labelledby="page-title">
+    <div class="container">
+      <Crumbs items={[{ label: 'Home', href: '/' }, { label }]} />
+      <h1 class="page-hero__title page-hero__title--xl" id="page-title" set:html={accent(page.title)} />
+      {page.updated && <p class="page-hero__text">Last updated {page.updated}</p>}
+    </div>
+  </section>
+
+  <section class="section legal">
+    <div class="container">
+      <div class="prose" set:html={richText(page.body)} />
+    </div>
+  </section>
+</Base>

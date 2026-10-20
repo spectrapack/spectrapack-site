@@ -1,0 +1,9 @@
+# spectrapack.co.in
+# Everything is open to search engines except the thank-you page and the admin panel.
+
+User-agent: *
+Allow: /
+Disallow: /thanks/
+Disallow: /admin/
+
+Sitemap: https://www.spectrapack.co.in/sitemap-index.xml

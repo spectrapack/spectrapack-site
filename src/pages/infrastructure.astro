@@ -1,0 +1,102 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import Media from '../components/Media.astro';
+import Crumbs from '../components/Crumbs.astro';
+import Checklist from '../components/Checklist.astro';
+import QuickLinks from '../components/QuickLinks.astro';
+import { getDoc, deref } from '../lib/content.js';
+import { accent } from '../lib/text.js';
+
+const page = await getDoc('infrastructurePage');
+const steps = await Promise.all((page.steps || []).map(async (s) => ({
+  ...s,
+  machineDocs: (await Promise.all((s.machines || []).map(deref))).filter(Boolean),
+})));
+---
+<Base seo={page.seo} title="Infrastructure" nav="infrastructure" css="detail" scripts={['reveal', 'tabs']}>
+
+  <section class="page-hero page-hero--circle" aria-labelledby="page-title">
+    <div class="container">
+      <Crumbs items={[{ label: 'Home', href: '/' }, { label: 'Infrastructure' }]} />
+      <div class="page-hero__grid">
+        <Media image={page.image} priority widths={[500, 1000]} sizes="(max-width: 1023px) 80vw, 480px" />
+        <div class="page-hero__body">
+          <p class="eyebrow">{page.eyebrow}</p>
+          <h1 class="page-hero__light" id="page-title" set:html={accent(page.title)} />
+          {page.button?.label && <a class="btn" href={page.button.href}><span class="btn__dot"><Icon name="chevron" /></span>{page.button.label}</a>}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="subnav" aria-label="On this page" data-subnav>
+    <ul>
+      <li><a href="#artwork" class="is-active">Artwork</a></li>
+      <li><a href="#process">Process &amp; machinery</a></li>
+      <li><a href="#quality">Quality</a></li>
+    </ul>
+  </nav>
+
+  <section class="section section--panel" id="artwork" aria-labelledby="artwork-title">
+    <div class="container split">
+      <Media image={page.artworkImage} widths={[600, 1200]} sizes="(max-width: 1023px) 100vw, 50vw" />
+      <div data-reveal>
+        <h2 class="section-title section-title--sm" id="artwork-title" set:html={accent(page.artworkTitle)} />
+        <p class="split__text">{page.artworkText}</p>
+        <Checklist items={page.artworkChecklist} />
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="process" aria-labelledby="process-title">
+    <div class="container">
+      <div class="details">
+        <h2 class="details__title" id="process-title" data-reveal set:html={accent(page.processTitle)} />
+        <p class="details__lead" data-reveal>{page.processLead}</p>
+      </div>
+      <ol class="process">
+        {steps.map((s) => (
+          <li class="stage" id={s.anchor} data-reveal>
+            <p class="stage__num">{s.number}<small>{s.tag}</small></p>
+            <div>
+              <h3 class="stage__title">{s.title}</h3>
+              <p class="stage__text">{s.text}</p>
+              {s.why && <p class="stage__why">{s.why}</p>}
+              {s.specs?.length > 0 && <ul class="specs">{s.specs.map((x) => <li>{x}</li>)}</ul>}
+            </div>
+            <Media image={s.image} widths={[600, 1200]} sizes="(max-width: 1023px) 100vw, 40vw" />
+            {s.machineDocs.length > 0 && (
+              <div class="stage__machines">
+                <p class="stage__machines-title">Machinery</p>
+                <div class="stage__machines-list">
+                  {s.machineDocs.map((m) => (
+                    <article class="machine">
+                      <Media image={m.image} widths={[400, 800]} sizes="(max-width: 767px) 100vw, 300px" />
+                      <h3 class="machine__title">{m.title}</h3>
+                      <p class="machine__plain">{m.description}</p>
+                      {m.specs?.length > 0 && <ul class="specs">{m.specs.map((x) => <li>{x}</li>)}</ul>}
+                    </article>
+                  ))}
+                </div>
+              </div>
+            )}
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section--panel" id="quality" aria-labelledby="quality-title">
+    <div class="container split">
+      <div data-reveal>
+        <h2 class="section-title section-title--sm" id="quality-title" set:html={accent(page.qualityTitle)} />
+        <p class="split__text">{page.qualityText}</p>
+        <Checklist items={page.qualityChecklist} />
+      </div>
+      <Media image={page.qualityImage} widths={[600, 1200]} sizes="(max-width: 1023px) 100vw, 50vw" />
+    </div>
+  </section>
+
+  <QuickLinks except="infrastructure" />
+</Base>

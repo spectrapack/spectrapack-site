@@ -1,0 +1,23 @@
+---
+/** The strip of big links at the foot of inner pages, minus the page you are on. */
+import Icon from './Icon.astro';
+import { getDoc } from '../lib/content.js';
+
+interface Props { except?: string }
+const { except } = Astro.props;
+const site = await getDoc('siteSettings');
+const LINKS = [
+  { key: 'products', href: '/products/', icon: 'grid', label: 'Products' },
+  { key: 'industries', href: '/industries/', icon: 'layers', label: 'Industries' },
+  { key: 'infrastructure', href: '/infrastructure/', icon: 'factory', label: 'Infrastructure' },
+  { key: 'about', href: '/about/', icon: 'document', label: 'About us' },
+  { key: 'contact', href: '/contact/', icon: 'mail', label: `Contact ${site.companyName}` },
+].filter((l) => l.key !== except);
+---
+<section class="quicklinks" aria-label="Explore more">
+  <div class="container">
+    <ul class="quicklinks__list">
+      {LINKS.map((l, i) => <li data-reveal style={`--i:${i}`}><a href={l.href}><Icon name={l.icon} /><span>{l.label}</span></a></li>)}
+    </ul>
+  </div>
+</section>

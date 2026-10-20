@@ -1,0 +1,12 @@
+---
+/** One tile per industry, linking to its section on the industries page. */
+import Media from './Media.astro';
+import { listOf } from '../lib/content.js';
+
+const industries = await listOf('industry');
+---
+<div class="tiles">
+  {industries.map((ind, i) => (
+    <a class="tile" href={`/industries/#${ind.slug?.current}`} data-reveal style={`--i:${i % 5}`}><Media image={ind.image} widths={[480, 960]} sizes="(max-width: 767px) 50vw, 240px" /><h3 class="tile__title">{ind.title}</h3></a>
+  ))}
+</div>

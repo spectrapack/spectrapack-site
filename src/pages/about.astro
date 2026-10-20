@@ -1,0 +1,122 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import Media from '../components/Media.astro';
+import Crumbs from '../components/Crumbs.astro';
+import QuickLinks from '../components/QuickLinks.astro';
+import SectorTiles from '../components/SectorTiles.astro';
+import { getDoc } from '../lib/content.js';
+import { accent } from '../lib/text.js';
+
+const page = await getDoc('aboutPage');
+const PARA_CLASS = { bold: undefined, accent: 'accent', normal: undefined };
+---
+<Base seo={page.seo} title="About us" nav="about" css="about" scripts={['reveal', 'carousel']}>
+
+  <section class="page-hero page-hero--vision" aria-labelledby="vision-title">
+    <Media image={page.visionImage} class="media--fill" priority widths={[960, 1920]} sizes="100vw" />
+    <div class="container">
+      <Crumbs items={[{ label: 'Home', href: '/' }, { label: 'About us' }]} />
+    </div>
+    <div class="container page-hero__center">
+      <h1 class="eyebrow" id="vision-title">{page.visionEyebrow}</h1>
+      <p class="page-hero__statement" set:html={accent(page.visionStatement)} />
+    </div>
+  </section>
+
+  <section class="section intro" aria-labelledby="intro-title">
+    <div class="container">
+      <h2 class="section-title section-title--sm" id="intro-title" data-reveal set:html={accent(page.introTitle)} />
+      <div class="intro__copy" data-reveal>
+        {(page.introParagraphs || []).map((p) => p.style === 'bold'
+          ? <p><strong>{p.text}</strong></p>
+          : <p class={PARA_CLASS[p.style]}>{p.text}</p>)}
+      </div>
+      <Media image={page.introImage} widths={[640, 1264]} sizes="(max-width: 1023px) 100vw, 50vw" />
+    </div>
+  </section>
+
+  <section class="section section--panel overview" aria-labelledby="overview-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <h2 class="section-title section-title--sm" id="overview-title" set:html={accent(page.overviewTitle)} />
+        <p class="section-lead section-lead--narrow">{page.overviewLead}</p>
+      </div>
+      <Media image={page.overviewImage} widths={[800, 1600]} sizes="(max-width: 1279px) 100vw, 1200px" />
+      <dl class="overview__nums">
+        {(page.numbers || []).map((n, i) => (
+          <div data-reveal style={`--i:${i}`}><dt>{n.value}{n.unit && <small> {n.unit}</small>}</dt><dd>{n.label}</dd></div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="section business" id="business" data-carousel aria-labelledby="business-title">
+    <div class="container business__head" data-reveal>
+      <div>
+        <h2 class="section-title section-title--sm" id="business-title" set:html={accent(page.businessTitle)} />
+        <p>{page.businessText}</p>
+      </div>
+      <div class="business__arrows">
+        <button class="round-btn round-btn--soft" type="button" data-carousel-prev aria-label="Previous stage"><Icon name="arrow-left" /></button>
+        <button class="round-btn" type="button" data-carousel-next aria-label="Next stage"><Icon name="arrow" /></button>
+      </div>
+    </div>
+    <div class="carousel">
+      <ul class="carousel__track" data-carousel-track>
+        {(page.stages || []).map((s) => (
+          <li class="carousel__item"><a class="overlay-card" href={s.href}>
+            <Media image={s.image} class="media--fill media--dark" widths={[600, 1200]} sizes="(max-width: 767px) 85vw, 420px" />
+            <span class="overlay-card__step">STAGE {s.step}</span>
+            <h3 class="overlay-card__title">{s.title}</h3>
+            <p class="overlay-card__meta"><span>{s.meta}</span><Icon name="arrow" /></p>
+          </a></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--panel" aria-labelledby="sectors-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <h2 class="section-title section-title--sm" id="sectors-title" set:html={accent(page.sectorsTitle)} />
+        <p class="section-lead section-lead--narrow">{page.sectorsLead}</p>
+      </div>
+      <SectorTiles />
+    </div>
+  </section>
+
+  <section class="section timeline" id="milestones" aria-labelledby="milestones-title">
+    <div class="container">
+      <h2 class="timeline__lead" id="milestones-title" data-reveal>{page.milestonesLead}</h2>
+      <ol class="timeline__list">
+        {(page.milestones || []).map((m) => (
+          <li class="timeline__item" data-reveal>
+            <Media image={m.image} widths={[600, 1200]} sizes="(max-width: 767px) 100vw, 40vw" />
+            <div>
+              <p class="timeline__year">{m.year}</p>
+              <h3 class="timeline__title">{m.title}</h3>
+              <p class="timeline__text">{m.text}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section--panel team" id="team" aria-labelledby="team-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <h2 class="section-title section-title--sm" id="team-title" set:html={accent(page.teamTitle)} />
+      </div>
+      <ul class="team__grid">
+        {(page.team || []).map((t, i) => (
+          <li data-reveal style={`--i:${i}`}><Media image={t.photo} label="Photo" widths={[400, 800]} sizes="(max-width: 767px) 50vw, 280px" /><h3 class="team__name">{t.name}</h3><p class="team__role">{t.role}</p></li>
+        ))}
+      </ul>
+      {page.teamNote && <p class="team__note" data-reveal>{page.teamNote}</p>}
+    </div>
+  </section>
+
+  <QuickLinks except="about" />
+</Base>

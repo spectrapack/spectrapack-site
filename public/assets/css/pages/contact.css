@@ -1,0 +1,121 @@
+/* Contact page: overlapping white sheets, map, info tiles, enquiry form. */
+
+.sheets {
+  display: grid;
+  gap: 40px;
+  margin-top: calc(clamp(6rem, 4rem + 8vw, 11rem) * -1 + 40px);
+  padding-bottom: clamp(3.5rem, 2rem + 5vw, 6.25rem);
+}
+
+.sheet {
+  position: relative;
+  padding: clamp(1.5rem, 1rem + 3vw, 3.5rem) clamp(1.25rem, 0.5rem + 3vw, 3.5rem);
+  border-radius: var(--radius);
+  background: var(--c-paper);
+  box-shadow: 0 12px 40px -24px rgba(60, 30, 20, 0.35);
+  overflow: hidden;
+}
+
+.sheet::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 6px;
+  background: var(--spectrum);
+}
+
+.sheet__title {
+  font-size: var(--fs-h2-sm);
+  font-weight: 700;
+  text-align: center;
+}
+
+.sheet__sub {
+  margin-top: 40px;
+  color: var(--c-accent-dark);
+  font-size: 1.375rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.map {
+  margin-top: 32px;
+  border-radius: 12px;
+  background: var(--c-panel);
+  overflow: hidden;
+  aspect-ratio: 16 / 7;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.info-tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.info-tile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 24px;
+  border-radius: 12px;
+  background: linear-gradient(100deg, #f7e1dd 0%, #fbf0ee 100%);
+}
+
+.info-tile--gold {
+  background: linear-gradient(100deg, #fbecc8 0%, #fdf6e3 100%);
+}
+
+.info-tile h3 {
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+
+.info-tile p {
+  margin-top: 6px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.info-tile a:hover {
+  color: var(--c-accent);
+  text-decoration: underline;
+}
+
+.info-tile__icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  flex: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--c-accent);
+}
+
+.sheet .form {
+  max-width: 980px;
+  margin: 32px auto 0;
+}
+
+@media (max-width: 767px) {
+  .map {
+    aspect-ratio: 4 / 3;
+  }
+
+  .info-tiles {
+    grid-template-columns: 1fr;
+  }
+
+  .form__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
